@@ -70,7 +70,7 @@
 /* LeaveHistory */
 
 .inpt-search {
-  width: 350px;
+  width: 550px;
 }
 
 .ml-10 {
@@ -87,4 +87,7 @@
 
 .btn-align {
   margin-right: 15px;
+}
+.table-inside {
+  background-color: red;
 }

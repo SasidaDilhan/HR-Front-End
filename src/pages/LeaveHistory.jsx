@@ -112,7 +112,7 @@ function LeaveHistory() {
               </div>
               {/*                            <div class="col-sm-12 col-md-9">*/}
               {/*                                <div class="dt-action-buttons text-xl-end text-lg-start text-md-end text-start d-flex align-items-start justify-content-md-start justify-content-start flex-wrap me-1">*/}
-              <div className="dt-action-buttons text-lg-start ">
+              <div className="dt-action-buttons text-lg-start  ">
                 <div className="me-3">
                   <div
                     id="DataTables_Table_0_filter"
@@ -139,22 +139,15 @@ function LeaveHistory() {
             </div>
           </div>
         </div>
-        <div className="card mt-4">
-          <div className="card-header">
-            <div className="row mb-3">
+        <div className="card mt-4 ">
+          <div className="card-header ">
+            <div className="row mb-3 ">
               <div className="card-datatable table-responsive">
                 <div
-                  style={{}}
                   id="DataTables_Table_0_wrapper1"
-                  className="dataTables_wrapper dt-bootstrap5 no-footer"
+                  className="dataTables_wrapper dt-bootstrap5 no-footer  "
                 >
-                  {/*                                    <div class="card">*/}
-                  <table
-                    className="datatables-users form-control table dataTable no-footer dtr-column"
-                    id="DataTables_Table_0"
-                    aria-describedby="DataTables_Table_0_info"
-                    style={{ width: 1115 }}
-                  >
+                  <table className="table table-striped mb-4">
                     <thead>
                       <tr>
                         <th>Name</th>
@@ -165,199 +158,186 @@ function LeaveHistory() {
                         <th>Out_time</th>
                         <th>Status</th>
                       </tr>
-
-                      <tr>
-                        {/*                                                        <td>E001</td>*/}
-                        <td>Viduth Ranaweera</td>
+                    </thead>
+                    <tbody className="table-border-bottom-0">
+                      <tr className="table-row">
+                        <td>
+                          <span className="">Viduth Ranaweera</span>
+                        </td>
                         <td>IT</td>
                         <td>Gate Pass</td>
                         <td>2023-01-01</td>
                         <td>
-                          <span className="badge bg-label-danger me-1">
+                          <span className="p-1 rounded bg-label-danger me-1">
                             10-00am
                           </span>
                         </td>
                         <td>
-                          <span className="badge bg-label-danger me-1">
+                          <span className="p-1 rounded bg-label-danger me-1">
                             12-00pm
                           </span>
                         </td>
                         <td>
-                          <button className="btn btn-sm btn-primary btn-align">
-                            Edit
-                          </button>
-                          <button className="btn btn-sm btn-warning">
-                            View
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        {/*                                                        <td>E001</td>*/}
-                        <td>Viduth Ranaweera</td>
-                        <td>IT</td>
-                        <td>Gate Pass</td>
-                        <td>2023-01-01</td>
-                        <td>
-                          <span className="badge bg-label-success me-1">
-                            10-00am
-                          </span>
-                        </td>
-                        <td>
-                          <span className="badge bg-label-success me-1">
-                            12-00pm
-                          </span>
-                        </td>
-                        <td>
-                          <button className="btn btn-sm btn-primary btn-align">
-                            Edit
-                          </button>
-                          <button className="btn btn-sm btn-warning">
-                            View
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        {/*                                                        <td>E001</td>*/}
-                        <td>Viduth Ranaweera</td>
-                        <td>IT</td>
-                        <td>Gate Pass</td>
-                        <td>2023-01-01</td>
-                        <td>
-                          <span className="badge bg-label-success me-1">
-                            10-00am
-                          </span>
-                        </td>
-                        <td>
-                          <span className="badge bg-label-success me-1">
-                            12-00pm
-                          </span>
-                        </td>
-                        <td>
-                          <button className="btn btn-sm btn-primary btn-align">
-                            Edit
-                          </button>
-                          <button className="btn btn-sm btn-warning">
-                            View
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        {/*                                                        <td>E001</td>*/}
-                        <td>Viduth Ranaweera</td>
-                        <td>IT</td>
-                        <td>Gate Pass</td>
-                        <td>2023-01-01</td>
-                        <td>
-                          <span className="badge bg-label-success me-1">
-                            10-00am
-                          </span>
-                        </td>
-                        <td>
-                          <span className="badge bg-label-success me-1">
-                            12-00pm
-                          </span>
-                        </td>
-                        <td>
-                          <button className="btn btn-sm btn-primary btn-align">
-                            Edit
-                          </button>
-                          <button className="btn btn-sm btn-warning">
-                            View
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        {/*                                                        <td>E001</td>*/}
-                        <td>Viduth Ranaweera</td>
-                        <td>IT</td>
-                        <td>Gate Pass</td>
-                        <td>2023-01-01</td>
-                        <td>
-                          <span className="badge bg-label-success me-1">
-                            10-00am
-                          </span>
-                        </td>
-                        <td>
-                          <span className="badge bg-label-success me-1">
-                            12-00pm
-                          </span>
-                        </td>
-                        <td>
-                          <button className="btn btn-sm btn-primary btn-align">
-                            Edit
-                          </button>
-                          <button className="btn btn-sm btn-warning">
-                            View
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        {/*                                                        <td>E001</td>*/}
-                        <td>Viduth Ranaweera</td>
-                        <td>IT</td>
-                        <td>Gate Pass</td>
-                        <td>2023-01-01</td>
-                        <td>
-                          <span className="badge bg-label-success me-1">
-                            10-00am
-                          </span>
-                        </td>
-                        <td>
-                          <span className="badge bg-label-success me-1">
-                            12-00pm
-                          </span>
-                        </td>
-                        <td>
-                          <button className="btn btn-sm btn-primary btn-align">
-                            Edit
-                          </button>
-                          <button className="btn btn-sm btn-warning">
-                            View
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        {/*                                                        <td>E001</td>*/}
-                        <td>Viduth Ranaweera</td>
-                        <td>IT</td>
-                        <td>Gate Pass</td>
-                        <td>2023-01-01</td>
-                        <td>
-                          <span className="badge bg-label-success me-1">
-                            10-00am
-                          </span>
-                        </td>
-                        <td>
-                          <span className="badge bg-label-success me-1">
-                            12-00pm
-                          </span>
-                        </td>
-                        <td>
-                          <button className="btn btn-sm btn-primary btn-align">
-                            Edit
-                          </button>
-                          <button className="btn btn-sm btn-warning">
-                            View
-                          </button>
-                        </td>
-                      </tr>
-                      <tr></tr>
-                      <tr className="no-records">
-                        <td>
-                          <div className="alert alert-secondary">
-                            No Previous Leave
+                          <div className="dropdown">
+                            <button
+                              type="button"
+                              className="btn p-0 dropdown-toggle hide-arrow"
+                              data-bs-toggle="dropdown"
+                            >
+                              <i className="bx bx-dots-vertical-rounded" />
+                            </button>
+                            <div className="dropdown-menu">
+                              <a
+                                className="dropdown-item"
+                                href="javascript:void(0);"
+                              >
+                                <i className="bx bx-edit-alt me-1" /> Edit 
+                              </a>
+                              <a
+                                className="dropdown-item"
+                                href="javascript:void(0);"
+                              >
+                                <i className="bx bx-history me-1" /> View
+                              </a>
+                            </div>
                           </div>
                         </td>
                       </tr>
-                    </thead>
-                    {/* </div> */}
-                    <tbody>
-                      <tr className="odd">
-                        {/*                                    <td class="  control" tabindex="0" style="display: none;"></td><td class="sorting_1"><div class="d-flex justify-content-start align-items-center user-name"><div class="avatar-wrapper"><div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/2.png" alt="Avatar" class="rounded-circle"></div></div><div class="d-flex flex-column"><a href="app-user-view-account.html" class="text-body text-truncate"><span class="fw-medium">Zsazsa McCleverty</span></a><small class="text-muted">zmcclevertye@soundcloud.com</small></div></div></td><td><span class="text-truncate d-flex align-items-center"><span class="badge badge-center rounded-pill bg-label-primary w-px-30 h-px-30 me-2"><i class="bx bx-pie-chart-alt bx-xs"></i></span>Maintainer</span></td><td><span class="fw-medium">Enterprise</span></td><td>Auto Debit</td><td><span class="badge bg-label-success">Active</span></td><td><div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon"><i class="bx bx-edit"></i></button><button class="btn btn-sm btn-icon delete-record"><i class="bx bx-trash"></i></button><button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded me-2"></i></button><div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html" class="dropdown-item">View</a><a href="javascript:;" class="dropdown-item">Suspend</a></div></div></td></tr><tr class="even"><td class="  control" tabindex="0" style="display: none;"></td><td class="sorting_1"><div class="d-flex justify-content-start align-items-center user-name"><div class="avatar-wrapper"><div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/7.png" alt="Avatar" class="rounded-circle"></div></div><div class="d-flex flex-column"><a href="app-user-view-account.html" class="text-body text-truncate"><span class="fw-medium">Yoko Pottie</span></a><small class="text-muted">ypottiec@privacy.gov.au</small></div></div></td><td><span class="text-truncate d-flex align-items-center"><span class="badge badge-center rounded-pill bg-label-warning w-px-30 h-px-30 me-2"><i class="bx bx-user bx-xs"></i></span>Subscriber</span></td><td><span class="fw-medium">Basic</span></td><td>Auto Debit</td><td><span class="badge bg-label-secondary">Inactive</span></td><td><div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon"><i class="bx bx-edit"></i></button><button class="btn btn-sm btn-icon delete-record"><i class="bx bx-trash"></i></button><button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded me-2"></i></button><div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html" class="dropdown-item">View</a><a href="javascript:;" class="dropdown-item">Suspend</a></div></div></td></tr><tr class="odd"><td class="  control" tabindex="0" style="display: none;"></td><td class="sorting_1"><div class="d-flex justify-content-start align-items-center user-name"><div class="avatar-wrapper"><div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/6.png" alt="Avatar" class="rounded-circle"></div></div><div class="d-flex flex-column"><a href="app-user-view-account.html" class="text-body text-truncate"><span class="fw-medium">Wesley Burland</span></a><small class="text-muted">wburlandj@uiuc.edu</small></div></div></td><td><span class="text-truncate d-flex align-items-center"><span class="badge badge-center rounded-pill bg-label-info w-px-30 h-px-30 me-2"><i class="bx bx-edit bx-xs"></i></span>Editor</span></td><td><span class="fw-medium">Team</span></td><td>Auto Debit</td><td><span class="badge bg-label-secondary">Inactive</span></td><td><div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon"><i class="bx bx-edit"></i></button><button class="btn btn-sm btn-icon delete-record"><i class="bx bx-trash"></i></button><button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded me-2"></i></button><div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html" class="dropdown-item">View</a><a href="javascript:;" class="dropdown-item">Suspend</a></div></div></td></tr><tr class="even"><td class="  control" tabindex="0" style="display: none;"></td><td class="sorting_1"><div class="d-flex justify-content-start align-items-center user-name"><div class="avatar-wrapper"><div class="avatar avatar-sm me-3"><span class="avatar-initial rounded-circle bg-label-info">VK</span></div></div><div class="d-flex flex-column"><a href="app-user-view-account.html" class="text-body text-truncate"><span class="fw-medium">Vladamir Koschek</span></a><small class="text-muted">vkoschek17@abc.net.au</small></div></div></td><td><span class="text-truncate d-flex align-items-center"><span class="badge badge-center rounded-pill bg-label-success w-px-30 h-px-30 me-2"><i class="bx bx-cog bx-xs"></i></span>Author</span></td><td><span class="fw-medium">Team</span></td><td>Manual - Paypal</td><td><span class="badge bg-label-success">Active</span></td><td><div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon"><i class="bx bx-edit"></i></button><button class="btn btn-sm btn-icon delete-record"><i class="bx bx-trash"></i></button><button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded me-2"></i></button><div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html" class="dropdown-item">View</a><a href="javascript:;" class="dropdown-item">Suspend</a></div></div></td></tr><tr class="odd"><td class="  control" tabindex="0" style="display: none;"></td><td class="sorting_1"><div class="d-flex justify-content-start align-items-center user-name"><div class="avatar-wrapper"><div class="avatar avatar-sm me-3"><span class="avatar-initial rounded-circle bg-label-info">TW</span></div></div><div class="d-flex flex-column"><a href="app-user-view-account.html" class="text-body text-truncate"><span class="fw-medium">Tyne Widmore</span></a><small class="text-muted">twidmore12@bravesites.com</small></div></div></td><td><span class="text-truncate d-flex align-items-center"><span class="badge badge-center rounded-pill bg-label-warning w-px-30 h-px-30 me-2"><i class="bx bx-user bx-xs"></i></span>Subscriber</span></td><td><span class="fw-medium">Team</span></td><td>Manual - Cash</td><td><span class="badge bg-label-warning">Pending</span></td><td><div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon"><i class="bx bx-edit"></i></button><button class="btn btn-sm btn-icon delete-record"><i class="bx bx-trash"></i></button><button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded me-2"></i></button><div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html" class="dropdown-item">View</a><a href="javascript:;" class="dropdown-item">Suspend</a></div></div></td></tr><tr class="even"><td class="  control" tabindex="0" style="display: none;"></td><td class="sorting_1"><div class="d-flex justify-content-start align-items-center user-name"><div class="avatar-wrapper"><div class="avatar avatar-sm me-3"><span class="avatar-initial rounded-circle bg-label-danger">TB</span></div></div><div class="d-flex flex-column"><a href="app-user-view-account.html" class="text-body text-truncate"><span class="fw-medium">Travus Bruntjen</span></a><small class="text-muted">tbruntjeni@sitemeter.com</small></div></div></td><td><span class="text-truncate d-flex align-items-center"><span class="badge badge-center rounded-pill bg-label-secondary w-px-30 h-px-30 me-2"><i class="bx bx-mobile-alt bx-xs"></i></span>Admin</span></td><td><span class="fw-medium">Enterprise</span></td><td>Manual - Cash</td><td><span class="badge bg-label-success">Active</span></td><td><div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon"><i class="bx bx-edit"></i></button><button class="btn btn-sm btn-icon delete-record"><i class="bx bx-trash"></i></button><button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded me-2"></i></button><div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html" class="dropdown-item">View</a><a href="javascript:;" class="dropdown-item">Suspend</a></div></div></td></tr><tr class="odd"><td class="  control" tabindex="0" style="display: none;"></td><td class="sorting_1"><div class="d-flex justify-content-start align-items-center user-name"><div class="avatar-wrapper"><div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/1.png" alt="Avatar" class="rounded-circle"></div></div><div class="d-flex flex-column"><a href="app-user-view-account.html" class="text-body text-truncate"><span class="fw-medium">Stu Delamaine</span></a><small class="text-muted">sdelamainek@who.int</small></div></div></td><td><span class="text-truncate d-flex align-items-center"><span class="badge badge-center rounded-pill bg-label-success w-px-30 h-px-30 me-2"><i class="bx bx-cog bx-xs"></i></span>Author</span></td><td><span class="fw-medium">Basic</span></td><td>Auto Debit</td><td><span class="badge bg-label-warning">Pending</span></td><td><div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon"><i class="bx bx-edit"></i></button><button class="btn btn-sm btn-icon delete-record"><i class="bx bx-trash"></i></button><button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded me-2"></i></button><div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html" class="dropdown-item">View</a><a href="javascript:;" class="dropdown-item">Suspend</a></div></div></td></tr><tr class="even"><td class="  control" tabindex="0" style="display: none;"></td><td class="sorting_1"><div class="d-flex justify-content-start align-items-center user-name"><div class="avatar-wrapper"><div class="avatar avatar-sm me-3"><span class="avatar-initial rounded-circle bg-label-danger">SO</span></div></div><div class="d-flex flex-column"><a href="app-user-view-account.html" class="text-body text-truncate"><span class="fw-medium">Saunder Offner</span></a><small class="text-muted">soffner19@mac.com</small></div></div></td><td><span class="text-truncate d-flex align-items-center"><span class="badge badge-center rounded-pill bg-label-primary w-px-30 h-px-30 me-2"><i class="bx bx-pie-chart-alt bx-xs"></i></span>Maintainer</span></td><td><span class="fw-medium">Enterprise</span></td><td>Auto Debit</td><td><span class="badge bg-label-warning">Pending</span></td><td><div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon"><i class="bx bx-edit"></i></button><button class="btn btn-sm btn-icon delete-record"><i class="bx bx-trash"></i></button><button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded me-2"></i></button><div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html" class="dropdown-item">View</a><a href="javascript:;" class="dropdown-item">Suspend</a></div></div></td></tr><tr class="odd"><td class="  control" tabindex="0" style="display: none;"></td><td class="sorting_1"><div class="d-flex justify-content-start align-items-center user-name"><div class="avatar-wrapper"><div class="avatar avatar-sm me-3"><span class="avatar-initial rounded-circle bg-label-dark">SM</span></div></div><div class="d-flex flex-column"><a href="app-user-view-account.html" class="text-body text-truncate"><span class="fw-medium">Stephen MacGilfoyle</span></a><small class="text-muted">smacgilfoyley@bigcartel.com</small></div></div></td><td><span class="text-truncate d-flex align-items-center"><span class="badge badge-center rounded-pill bg-label-primary w-px-30 h-px-30 me-2"><i class="bx bx-pie-chart-alt bx-xs"></i></span>Maintainer</span></td><td><span class="fw-medium">Company</span></td><td>Manual - Paypal</td><td><span class="badge bg-label-warning">Pending</span></td><td><div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon"><i class="bx bx-edit"></i></button><button class="btn btn-sm btn-icon delete-record"><i class="bx bx-trash"></i></button><button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded me-2"></i></button><div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html" class="dropdown-item">View</a><a href="javascript:;" class="dropdown-item">Suspend</a></div></div></td></tr><tr class="even"><td class="  control" tabindex="0" style="display: none;"></td><td class="sorting_1"><div class="d-flex justify-content-start align-items-center user-name"><div class="avatar-wrapper"><div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/9.png" alt="Avatar" class="rounded-circle"></div></div><div class="d-flex flex-column"><a href="app-user-view-account.html" class="text-body text-truncate"><span class="fw-medium">Skip Hebblethwaite</span></a><small class="text-muted">shebblethwaite10@arizona.edu</small></div></div></td><td><span class="text-truncate d-flex align-items-center"><span class="badge badge-center rounded-pill bg-label-secondary w-px-30 h-px-30 me-2"><i class="bx bx-mobile-alt bx-xs"></i></span>Admin</span></td><td><span class="fw-medium">Company</span></td><td>Manual - Cash</td><td><span class="badge bg-label-secondary">Inactive</span></td><td><div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon"><i class="bx bx-edit"></i></button><button class="btn btn-sm btn-icon delete-record"><i class="bx bx-trash"></i></button><button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded me-2"></i></button><div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html" class="dropdown-item">View</a><a href="javascript:;" class="dropdown-item">Suspend</a></div></div></td></tr></tbody>*/}
+                      <tr className="table-row">
+                        <td>
+                          <span className="">Viduth Ranaweera</span>
+                        </td>
+                        <td>IT</td>
+                        <td>Gate Pass</td>
+                        <td>2023-01-01</td>
+                        <td>
+                          <span className="p-1 rounded bg-label-danger me-1">
+                            10-00am
+                          </span>
+                        </td>
+                        <td>
+                          <span className="p-1 rounded bg-label-danger me-1">
+                            12-00pm
+                          </span>
+                        </td>
+                        <td>
+                          <div className="dropdown">
+                            <button
+                              type="button"
+                              className="btn p-0 dropdown-toggle hide-arrow"
+                              data-bs-toggle="dropdown"
+                            >
+                              <i className="bx bx-dots-vertical-rounded" />
+                            </button>
+                            <div className="dropdown-menu">
+                              <a
+                                className="dropdown-item"
+                                href="javascript:void(0);"
+                              >
+                                <i className="bx bx-edit-alt me-1" /> Re-Post
+                              </a>
+                              <a
+                                className="dropdown-item"
+                                href="javascript:void(0);"
+                              >
+                                <i className="bx bx-trash me-1" /> Delete
+                              </a>
+                            </div>
+                          </div>
+                        </td>
                       </tr>
+                      <tr className="table-row">
+                        <td>
+                          <span className="">Viduth Ranaweera</span>
+                        </td>
+                        <td>IT</td>
+                        <td>Gate Pass</td>
+                        <td>2023-01-01</td>
+                        <td>
+                          <span className="p-1 rounded bg-label-danger me-1">
+                            10-00am
+                          </span>
+                        </td>
+                        <td>
+                          <span className="p-1 rounded bg-label-danger me-1">
+                            12-00pm
+                          </span>
+                        </td>
+                        <td>
+                          <div className="dropdown">
+                            <button
+                              type="button"
+                              className="btn p-0 dropdown-toggle hide-arrow"
+                              data-bs-toggle="dropdown"
+                            >
+                              <i className="bx bx-dots-vertical-rounded" />
+                            </button>
+                            <div className="dropdown-menu">
+                              <a
+                                className="dropdown-item"
+                                href="javascript:void(0);"
+                              >
+                                <i className="bx bx-edit-alt me-1" /> Re-Post
+                              </a>
+                              <a
+                                className="dropdown-item"
+                                href="javascript:void(0);"
+                              >
+                                <i className="bx bx-trash me-1" /> Delete
+                              </a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr className="table-row">
+                        <td>
+                          <span className="">Viduth Ranaweera</span>
+                        </td>
+                        <td>IT</td>
+                        <td>Gate Pass</td>
+                        <td>2023-01-01</td>
+                        <td>
+                          <span className="p-1 rounded bg-label-danger me-1">
+                            10-00am
+                          </span>
+                        </td>
+                        <td>
+                          <span className="p-1 rounded bg-label-danger me-1">
+                            12-00pm
+                          </span>
+                        </td>
+                        <td>
+                          <div className="dropdown">
+                            <button
+                              type="button"
+                              className="btn p-0 dropdown-toggle hide-arrow"
+                              data-bs-toggle="dropdown"
+                            >
+                              <i className="bx bx-dots-vertical-rounded" />
+                            </button>
+                            <div className="dropdown-menu">
+                              <a
+                                className="dropdown-item"
+                                href="javascript:void(0);"
+                              >
+                                <i className="bx bx-edit-alt me-1" /> Re-Post
+                              </a>
+                              <a
+                                className="dropdown-item"
+                                href="javascript:void(0);"
+                              >
+                                <i className="bx bx-trash me-1" /> Delete
+                              </a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      
+                      
+                      
                     </tbody>
                   </table>
-                  {/*                                    </div>*/}
+
                   <div className="row mx-2">
                     <div className="col-sm-12 col-md-6">
                       <div
