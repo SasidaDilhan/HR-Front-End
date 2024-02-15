@@ -151,3 +151,11 @@
 #exampleFormControlSelect1 {
   width: 383px;
 }
+
+#logincard{
+  margin-top: 140px;
+  /* background-color: red; */
+  width: 600px;
+  margin-left: 150px;
+  height: 500px;
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/demo.css';
-import Image from '../avatars/10.png'
+import Image from '../avatars/logo.png'
 
 function Login() {
     const togglePasswordVisibility = () => {
@@ -22,10 +22,11 @@ function Login() {
   <div className="authentication-wrapper authentication-basic container-p-y">
     <div className="authentication-inner">
       {/* Register */}
-      <div className="card">
-        <div className="card-body">
+      <div className="card " id='logincard'>
+        <div className="card-body mt-50">
+          <div className='mt-20'>
           {/* Logo */}
-          <div className="app-brand justify-content-center">
+          <div className="app-brand justify-content-center ">
             <a href="index.html" className="app-brand-link gap-2">
               <div>
                 <img
@@ -99,6 +100,7 @@ function Login() {
               </button>
             </div>
           </form>
+          </div>
           <p />
         </div>
       </div>
