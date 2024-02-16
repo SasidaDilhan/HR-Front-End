@@ -24,7 +24,7 @@ function Login() {
       {/* Register */}
       <div className="card " id='logincard'>
         <div className="card-body mt-50">
-          <div className='mt-20'>
+          <div className='mt-10'>
           {/* Logo */}
           <div className="app-brand justify-content-center ">
             <a href="index.html" className="app-brand-link gap-2">
@@ -41,7 +41,7 @@ function Login() {
             </a>
           </div>
           {/* /Logo */}
-          <form id="formAuthentication" className="mb-3" action="index.html">
+          <form id="formAuthentication" className="m-3" action="index.html">
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
                 NIC
@@ -81,7 +81,7 @@ function Login() {
           </span>
         </div>
       </div>
-            <div className="mb-3">
+            <div className="mb-3 mt-3">
               <div className="form-check">
                 <input
                   className="form-check-input"
