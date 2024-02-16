@@ -785,7 +785,7 @@ export default function () {
               role="tabpanel"
             >
               <div className=" d-flex justify-content-start">
-                <p className="d-inline fs-4 ">Work Details</p>
+                <p className="d-inline fs-4 ">Current Work Details</p>
                 <p className="d-inline p-2 mb-3 text-danger ">*Required</p>
               </div>
               <form
@@ -850,6 +850,28 @@ export default function () {
                     <option value="spain">Spain</option>
                   </select>
                 </div>
+
+                <div className="mb-3">
+                  <label
+                    className="form-label d-flex justify-content-start"
+                    htmlFor="basic-default-country"
+                  >
+                    EMPLOYEEMENT CATEGORY
+                  </label>
+                  <select
+                    className="form-select"
+                    id="basic-default-country"
+                    required
+                    fdprocessedid="9ypqh3"
+                  >
+                    <option value="">select the category</option>
+                    <option value="usa">intern</option>
+                    <option value="uk">contract basis</option>
+                    <option value="uk">permen</option>
+                   
+                  </select>
+                </div>
+                
                 <div className="mb-3">
                   <label
                     className="form-label d-flex justify-content-start"
@@ -886,29 +908,9 @@ export default function () {
                     required
                     readOnly="readonly"
                   />
-                  <div className="invalid-feedback">Please Enter Your DOB</div>
+                  <div className="invalid-feedback"></div>
                 </div>
-                <div className="mb-3">
-                  <label
-                    className="form-label d-flex justify-content-start"
-                    htmlFor="basic-default-country"
-                  >
-                    EMPLOYEEMENT CATEGORY
-                  </label>
-                  <select
-                    className="form-select"
-                    id="basic-default-country"
-                    required
-                    fdprocessedid="9ypqh3"
-                  >
-                    <option value="">select the category</option>
-                    <option value="usa">USA</option>
-                    <option value="uk">UK</option>
-                    <option value="france">France</option>
-                    <option value="australia">Australia</option>
-                    <option value="spain">Spain</option>
-                  </select>
-                </div>
+                
                 <div className="mb-3">
                   <label
                     className="form-label d-flex justify-content-start"

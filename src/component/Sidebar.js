@@ -190,6 +190,50 @@ export default function Sidebar() {
                     </Link>
                   </li>
 
+
+                  <li className="menu-item">
+                    <Link
+                      to={"/finger-print"}
+                      className={`link-body-emphasis d-inline-flex text-decoration-none rounded ${
+                        activeMenuItem === "fingerprint"
+                          ? "active-menu-item"
+                          : ""
+                      }`}
+                      style={{
+                        marginLeft: "30px",
+
+                        opacity: "0.7",
+                        color: activeMenuItem === "fingerprint" ? "black" : "",
+                        // backgroundColor:
+                        //   activeMenuItem === "allEmployees" ? "gray" : "",
+                      }}
+                      onClick={() => handleMenuItemClick("fingerprint")}
+                    >
+                      <span
+                        className="dot"
+                        style={{
+                          marginRight: "27px",
+                          color:
+                            activeMenuItem === "fingerprint" ? "blue" : "",
+                          fontSize:
+                            activeMenuItem === "fingerprint" ? "30px" : "12px",
+                        }}
+                      >
+                        &#8226;
+                      </span>
+                      <span
+                        style={{
+                          color:
+                            activeMenuItem === "fingerprint" ? "blue" : "",
+                          fontSize:
+                            activeMenuItem === "fingerprint" ? "18px" : "16px",
+                        }}
+                      >
+                        Finger Print
+                      </span>
+                    </Link>
+                  </li>
+
                   <li className="menu-item">
                     <Link
                       to={"/attendence"}
