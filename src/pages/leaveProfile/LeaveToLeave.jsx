@@ -30,7 +30,7 @@ function LeaveToLeave() {
           <div className="d-flex align-items-start justify-content-between m-3">
             <div className="content-left">
               <div className="d-flex align-items-end mt-2">
-                <h4 className="mb-0 me-2">02 Days </h4>
+                <h4 className="mb-0 me-2">+02 Days </h4>
               </div>
               <span>Taken</span>
             </div>
@@ -48,9 +48,9 @@ function LeaveToLeave() {
           <div className="d-flex align-items-start justify-content-between m-3">
             <div className="content-left">
               <div className="d-flex align-items-end mt-2">
-                <h4 className="mb-0 me-2">05 Days </h4>
+                <h4 className="mb-0 me-2">365 Days </h4>
               </div>
-              <span>Remaining</span>
+              <span>Valid for</span>
               {/*                                        <p class="mb-0">Last week analytics </p>*/}
             </div>
             <div className="avatar">

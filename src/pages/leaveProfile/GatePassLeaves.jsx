@@ -31,7 +31,7 @@ function GatePassLeaves() {
           <div className="d-flex align-items-start justify-content-between m-3">
             <div className="content-left">
               <div className="d-flex align-items-end mt-2">
-                <h4 className="mb-0 me-2">02 Days </h4>
+                <h4 className="mb-0 me-2">01 Days </h4>
               </div>
               <span>Taken</span>
             </div>
@@ -49,7 +49,7 @@ function GatePassLeaves() {
           <div className="d-flex align-items-start justify-content-between m-3">
             <div className="content-left">
               <div className="d-flex align-items-end mt-2">
-                <h4 className="mb-0 me-2">05 Days </h4>
+                <h4 className="mb-0 me-2">01 Days </h4>
               </div>
               <span>Remaining</span>
               {/*                                        <p class="mb-0">Last week analytics </p>*/}
@@ -128,75 +128,59 @@ function GatePassLeaves() {
         {/* Content for the table of leaves */}
         {/*                            Table of leaves*/}
         <div className="table-responsive text-nowrap">
-          <table className="table">
-            <thead>
-              <tr>
-                <th>From</th>
-                <th>To</th>
-                <th>Reason</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody className="table-border-bottom-0 ">
-              <tr>
-                <td>
-                  <span className="fw-medium">
-                    2022/03/31
-                  </span>
-                </td>
-                <td>2022/04/31</td>
-                <td>
-                  <div>
-                    <span className="fw-medium">Fever</span>
-                  </div>
-                </td>
-                <td>
-                  <span className="badge bg-label-primary me-1">
-                    Accept
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <span className="fw-medium">
-                    2022/03/31
-                  </span>
-                </td>
-                <td>2022/04/31</td>
-                <td>
-                  <div>
-                    <span className="fw-medium">wedding</span>
-                  </div>
-                </td>
-                <td>
-                  <span className="badge bg-label-danger me-1">
-                    Reject
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <span className="fw-medium">
-                    2022/03/31
-                  </span>
-                </td>
-                <td>2022/04/31</td>
-                <td>
-                  <div>
-                    <span className="fw-medium">
-                      Goto school
-                    </span>
-                  </div>
-                </td>
-                <td>
-                  <span className="badge bg-label-primary me-1">
-                    Accept
-                  </span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+                        <table className="table">
+                          <thead>
+                            <tr>
+                              <th>Date</th>
+                              <th>Out Time</th>
+                              <th>In Time</th>
+                              <th>Reason</th>
+                              <th>Status</th>
+                            </tr>
+                          </thead>
+                          <tbody className="table-border-bottom-0">
+                            <tr>
+                              <td>
+                                <span className="fw-medium">2022/03/31</span>
+                              </td>
+                              <td>8.30</td>
+                              <td>03.00</td>
+                              <td>Fever</td>
+                              <td>
+                                <span className="badge bg-label-danger me-1">
+                                  Reject
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <span className="fw-medium">2022/03/31</span>
+                              </td>
+                              <td>8.30</td>
+                              <td>03.00</td>
+                              <td>Fever</td>
+                              <td>
+                                <span className="badge bg-label-primary me-1">
+                                  Accept
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <span className="fw-medium">2022/03/31</span>
+                              </td>
+                              <td>8.30</td>
+                              <td>03.00</td>
+                              <td>Fever</td>
+                              <td>
+                                <span className="badge bg-label-primary me-1">
+                                  Accept
+                                </span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
       </div>
     </div>
   </div>

@@ -4,11 +4,11 @@ function NotCovering() {
   return (
     <div
     className="tab-pane fade "
-    id="navs-top-maternityLeave"
+    id="navs-top-notCovering"
     role="tabpanel"
   >
     <div className="row mb-4 d-flex gap-2">
-      <h4>Maternity Leave </h4>
+      <h4>Not Covering Leaves</h4>
       <div className="col">
         <div className="">
           {/* Card content for Compulsory Leaves */}
@@ -17,7 +17,7 @@ function NotCovering() {
             <img
               className="h-px-100 w-px-100 rounded overflow-hidden "
               id="medicalimage"
-              
+            
               alt=''
             />
             {/* <p class="mb-0">Total Leaves</p> */}
