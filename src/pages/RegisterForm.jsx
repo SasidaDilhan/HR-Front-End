@@ -461,12 +461,12 @@ export default function () {
 
   return (
     <div>
-      <div className="col-md-6 mb-4 center-card">
+      <div className="col-md-6 mb-4 center-cad">
         {/* <div class="card"> */}
         {/* <div class="">
     <div class="col">
       <div class="card-body"> */}
-        <div className="nav-align-top mb-3" style={{ marginLeft: "50px" }}>
+        <div className="nav-align-top mb-3 container-lg" >
           <ul className="nav nav-tabs" role="tablist">
             <li className="nav-item" role="presentation">
               <button
@@ -541,7 +541,7 @@ export default function () {
               </button>
             </li>
           </ul>
-          <div className="tab-content" style={{ width: "90%" }}>
+          <div className="tab-content ">
             <div
               class="tab-pane fade active show"
               id="form-tabs-personal"
