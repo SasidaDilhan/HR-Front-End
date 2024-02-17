@@ -1,5 +1,4 @@
 import React from "react";
-import Style3 from '../css/Employee.css'
 import { Link } from "react-router-dom";
 
 
@@ -12,7 +11,7 @@ function AllEmployees() {
         {/*              Content*/}
         {/*               search bar*/}
        <div className="bg-white p-4 rounded">
-       <div className="input-group input-group-merge " id="search">
+       <div className="input-group input-group-merge mt-3 " id="search">
           <span className="input-group-text" id="basic-addon-search31">
             <i className="bx bx-search" />
           </span>
@@ -24,7 +23,7 @@ function AllEmployees() {
             aria-describedby="basic-addon-search31"
           />
         </div>
-        <div className="row py-2">
+        <div className="row py-2 ">
           <div className="col-lg col-12">
             <div>
               <div className="row">
