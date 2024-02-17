@@ -245,16 +245,6 @@ header .image-text .profession {
   transition: var(--tran-04);
 }
 
-.home {
-  position: absolute;
-  top: 0;
-  top: 0;
-  left: 350px;
-  height: 100vh;
-  width: calc(100% - 250px);
-  background-color: var(--body-color);
-  transition: var(--tran-05);
-}
 .home .text {
   font-size: 30px;
   font-weight: 500;

@@ -35,43 +35,25 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <div className="layout-wrapper layout-content-navbar">
-          <div className="layout-container">
+        <div className="row">
+          <div className="col-2 ">
             <SideBar />
-            <section className="home">
-              <div className="content ">
-                <div style={{ paddingRight: "300px" }}>
-                  <NavBar />
+          </div>
+          <div className="col-10  content-body">
+            <NavBar />
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/leave-issues" element={<LeaveIssues />} />
+              <Route path="/notice" element={<Notice />} />
+              <Route path="/all-employees" element={<AllEmployees />} />
+              <Route path="/pending-leaves" element={<PendingLeaves />} />
+              <Route path="/attendence" element={<Attendance />} />
 
-                  {/* <div className="mt-4 mb-4">
-                    <h1>Dashboard</h1>
-                  </div> */}
-
-                  <div className="content-body">
-                    <Routes>
-                      <Route path="/" element={<Login />} />
-                      <Route path="/leave-issues" element={<LeaveIssues />} />
-                      <Route path="/notice" element={<Notice />} />
-                      <Route path="/all-employees" element={<AllEmployees />} />
-                      <Route
-                        path="/pending-leaves"
-                        element={<PendingLeaves />}
-                      />
-                      <Route path="/attendence" element={<Attendance />} />
-
-                      <Route path="/user-profile" element={<User_profile />} />
-                      <Route path="/leave-profile" element={<Leave />} />
-                      <Route path="/leave-history" element={<LeaveHistory />} />
-                      <Route path="/register" element={<RegisterForm />} />
-                    </Routes>
-                  </div>
-
-                  <div>
-                    <Footer />
-                  </div>
-                </div>
-              </div>
-            </section>
+              <Route path="/user-profile" element={<User_profile />} />
+              <Route path="/leave-profile" element={<Leave />} />
+              <Route path="/leave-history" element={<LeaveHistory />} />
+              <Route path="/register" element={<RegisterForm />} />
+            </Routes>
           </div>
         </div>
       </Router>
