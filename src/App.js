@@ -33,6 +33,7 @@ function App() {
       toggle.removeEventListener("click", toggleSidebar);
     };
   }, []);
+
   return (
     <div className="App">
       <Router>
@@ -64,7 +65,7 @@ function App() {
                       <Route path="/leave-profile" element={<Leave />} />
                       <Route path="/leave-history" element={<LeaveHistory />} />
                       <Route path="/register" element={<RegisterForm />} />
-                      <Route path="/finger-print" element={<FingerPrint/>} />
+                      <Route path="/finger-print" element={<FingerPrint />} />
                     </Routes>
                   </div>
 
