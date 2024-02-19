@@ -5,6 +5,8 @@ import Swal from "sweetalert2";
 import "../css/register.css";
 
 export default function () {
+
+  
   /* date picker */
   useEffect(() => {
     const datePicker1 = document.getElementById("datepicker1");
@@ -297,6 +299,8 @@ export default function () {
       );
       form.removeEventListener("click", handleDeleteButtonClick);
     };
+
+    
   }, []);
   /* end of previous work form repeater */
 
@@ -397,6 +401,92 @@ export default function () {
 
   /* end of education form repeater */
 
+  /* dependent details form repeater */
+
+  useEffect(() => {
+    const handleAddRepeaterButtonClick = (event) => {
+      event.preventDefault();
+
+      const form = document.getElementById("bs-validation-form");
+      const repeaterItem = form.querySelector("[data-repeater-item]").cloneNode(true);
+      const repeaterList = form.querySelector('[data-repeater-list="group-a"]');
+
+      repeaterItem.querySelectorAll("input").forEach(function (input) {
+        input.value = "";
+      });
+
+      repeaterList.appendChild(repeaterItem);
+    };
+
+    const handleDeleteButtonClick = (event) => {
+      const deleteButton = event.target.closest("[data-repeater-delete]");
+
+      if (deleteButton) {
+        event.preventDefault();
+
+        const repeaterItem = deleteButton.closest("[data-repeater-item]");
+        const repeaterList = repeaterItem.parentElement;
+
+        if (repeaterList.childElementCount > 1) {
+          Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "Cancel",
+            customClass: {
+              confirmButton: "btn btn-primary me-1",
+              cancelButton: "btn btn-label-secondary",
+            },
+            buttonsStyling: false,
+          }).then(function (result) {
+            if (result.value) {
+              // If confirmed, remove the repeater item
+              repeaterList.removeChild(repeaterItem);
+              Swal.fire({
+                icon: "success",
+                title: "Deleted!",
+                text: "Your item has been deleted.",
+                customClass: {
+                  confirmButton: "btn btn-success",
+                },
+              });
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+              // If cancelled, do nothing
+              Swal.fire({
+                title: "Cancelled",
+                text: "Your item is safe :)",
+                icon: "error",
+                customClass: {
+                  confirmButton: "btn btn-success",
+                },
+              });
+            }
+          });
+        } else {
+          alert("At least one form must be present!");
+        }
+      }
+    };
+
+    const addRepeaterButton = document.getElementById("addRepeater2");
+    addRepeaterButton.addEventListener("click", handleAddRepeaterButtonClick);
+
+    const form = document.getElementById("bs-validation-form");
+    form.addEventListener("click", handleDeleteButtonClick);
+
+    return () => {
+      addRepeaterButton.removeEventListener("click", handleAddRepeaterButtonClick);
+      form.removeEventListener("click", handleDeleteButtonClick);
+    };
+  }, []);
+
+  /* end of dependent details form */
+
+  /* success alert when save */
   useEffect(() => {
     const handleSaveButtonClick = (event) => {
       const activeTabPane = document.querySelector(".tab-pane.active");
@@ -458,6 +548,91 @@ export default function () {
       document.removeEventListener("click", handleSaveButtonClick);
     };
   }, []);
+
+  /* end of success alert when save */
+
+  /* emergency details for repeater */
+  useEffect(() => {
+    const handleAddRepeaterButtonClick = (event) => {
+      event.preventDefault();
+
+      const form = document.getElementById("bs-validation-form1");
+      const repeaterItem = form.querySelector("[data-repeater-item]").cloneNode(true);
+      const repeaterList = form.querySelector('[data-repeater-list="group-a"]');
+
+      repeaterItem.querySelectorAll("input").forEach(function (input) {
+        input.value = "";
+      });
+
+      repeaterList.appendChild(repeaterItem);
+    };
+
+    const handleDeleteButtonClick = (event) => {
+      const deleteButton = event.target.closest("[data-repeater-delete]");
+
+      if (deleteButton) {
+        event.preventDefault();
+
+        const repeaterItem = deleteButton.closest("[data-repeater-item]");
+        const repeaterList = repeaterItem.parentElement;
+
+        if (repeaterList.childElementCount > 1) {
+          Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "Cancel",
+            customClass: {
+              confirmButton: "btn btn-primary me-1",
+              cancelButton: "btn btn-label-secondary",
+            },
+            buttonsStyling: false,
+          }).then(function (result) {
+            if (result.value) {
+              // If confirmed, remove the repeater item
+              repeaterList.removeChild(repeaterItem);
+              Swal.fire({
+                icon: "success",
+                title: "Deleted!",
+                text: "Your item has been deleted.",
+                customClass: {
+                  confirmButton: "btn btn-success",
+                },
+              });
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+              // If cancelled, do nothing
+              Swal.fire({
+                title: "Cancelled",
+                text: "Your item is safe :)",
+                icon: "error",
+                customClass: {
+                  confirmButton: "btn btn-success",
+                },
+              });
+            }
+          });
+        } else {
+          alert("At least one form must be present!");
+        }
+      }
+    };
+
+    const addRepeaterButton = document.getElementById("addRepeater3");
+    addRepeaterButton.addEventListener("click", handleAddRepeaterButtonClick);
+
+    const form = document.getElementById("bs-validation-form1");
+    form.addEventListener("click", handleDeleteButtonClick);
+
+    return () => {
+      addRepeaterButton.removeEventListener("click", handleAddRepeaterButtonClick);
+      form.removeEventListener("click", handleDeleteButtonClick);
+    };
+  }, []);
+  /* end of emergency details form repeater */
 
   return (
     <div>
@@ -782,7 +957,7 @@ export default function () {
               role="tabpanel"
             >
               <div className=" d-flex justify-content-start">
-                <p className="d-inline fs-4 ">Work Details</p>
+                <p className="d-inline fs-4 ">Current Work Details</p>
                 <p className="d-inline p-2 mb-3 text-danger ">*Required</p>
               </div>
               <form
@@ -847,6 +1022,28 @@ export default function () {
                     <option value="spain">Spain</option>
                   </select>
                 </div>
+
+                <div className="mb-3">
+                  <label
+                    className="form-label d-flex justify-content-start"
+                    htmlFor="basic-default-country"
+                  >
+                    EMPLOYEEMENT CATEGORY
+                  </label>
+                  <select
+                    className="form-select"
+                    id="basic-default-country"
+                    required
+                    fdprocessedid="9ypqh3"
+                  >
+                    <option value="">select the category</option>
+                    <option value="usa">intern</option>
+                    <option value="uk">contract basis</option>
+                    <option value="uk">permen</option>
+
+                  </select>
+                </div>
+
                 <div className="mb-3">
                   <label
                     className="form-label d-flex justify-content-start"
@@ -883,29 +1080,9 @@ export default function () {
                     required
                     readOnly="readonly"
                   />
-                  <div className="invalid-feedback">Please Enter Your DOB</div>
+                  <div className="invalid-feedback"></div>
                 </div>
-                <div className="mb-3">
-                  <label
-                    className="form-label d-flex justify-content-start"
-                    htmlFor="basic-default-country"
-                  >
-                    EMPLOYEEMENT CATEGORY
-                  </label>
-                  <select
-                    className="form-select"
-                    id="basic-default-country"
-                    required
-                    fdprocessedid="9ypqh3"
-                  >
-                    <option value="">select the category</option>
-                    <option value="usa">USA</option>
-                    <option value="uk">UK</option>
-                    <option value="france">France</option>
-                    <option value="australia">Australia</option>
-                    <option value="spain">Spain</option>
-                  </select>
-                </div>
+
                 <div className="mb-3">
                   <label
                     className="form-label d-flex justify-content-start"
@@ -1229,147 +1406,90 @@ export default function () {
               </div>
             </div>
 
-            <div
-              className="tab-pane fade"
-              id="form-tabs-dependent"
-              role="tabpanel"
-            >
+            <div className="tab-pane fade" id="form-tabs-dependent" role="tabpanel">
               <div className="mb-3">
-                <p className="d-inline fs-4 d-flex justify-content-start ">
-                  Dependent Details
-                </p>
+                <p className="d-inline fs-4 d-flex justify-content-start mb-4">Dependent Details</p>
               </div>
-              <form
-                className="needs-validation"
-                noValidate=""
-                id="bs-validation-form"
-              >
-                <div className="mb-3">
-                  <label
-                    className="form-label d-flex justify-content-start"
-                    htmlFor="bs-validation-name"
-                  >
-                    DEPENDENT NAME
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="bs-validation-name"
-                    placeholder="John Doe"
-                    required=""
-                  />
-                  <div className="invalid-feedback" />
+              <form className="needs-validation" noValidate id="bs-validation-form">
+                <div className="mb-3" data-repeater-list="group-a">
+                  <div className="mb-3" data-repeater-item>
+                    <label className="form-label d-flex justify-content-start" htmlFor="bs-validation-name">DEPENDENT NAME</label>
+                    <input type="text" className="form-control mb-4" id="bs-validation-name" placeholder="John Doe" required />
+                    <div className="invalid-feedback" />
+                    <label className="form-label d-flex justify-content-start" htmlFor="bs-validation-relationship">RELATIONSHIP</label>
+                    <input type="text" className="form-control" id="bs-validation-relationship" placeholder="Relationship" />
+                    <div className="col-lg-12 col-12 d-flex justify-content-end align-items-center mb-3 mt-4">
+                      <button type="button" className="btn btn-label-danger mb-4 w-15" data-repeater-delete id="confirm-color">
+                        <i className="bx bx-plus me-1 " />
+                        <span className="align-middle" style={{ fontSize: "15px" }}>Remove</span>
+                      </button>
+                    </div>
+                    <hr />
+                  </div>
                 </div>
-                <div className="mb-3">
-                  <label
-                    className="form-label d-flex justify-content-start"
-                    htmlFor="bs-validation-name"
-                  >
-                    RELATIONSHIP
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="bs-validation-name"
-                    placeholder="John Doe"
-                    required=""
-                  />
-                  <div className="invalid-feedback" />
-                </div>
-                <div className="row">
-                  <div className="col-12 d-flex justify-content-start">
-                    <button type="submit" className="btn btn-primary">
-                      Next
-                    </button>
-                    <button
-                      type="reset"
-                      className="btn btn-label-secondary ml-4"
-                      fdprocessedid="mo4gu"
-                    >
-                      Cancel
-                    </button>
+                <div className="mb-0 mt-3">
+                  <div className="row">
+                    <div className="col-12 d-flex justify-content-between">
+                      <div>
+                        <button type="submit" className="btn btn-primary">Next</button>
+                      </div>
+                      <div>
+                        <button className="btn btn-primary" type="button" id="addRepeater2">
+                          <i className="bx bx-plus me-1" />
+                          <span className="align-middle" style={{ fontSize: "15px" }}>Add More</span>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </form>
             </div>
 
-            <div
-              className="tab-pane fade"
-              id="form-tabs-emergency"
-              role="tabpanel"
-            >
+            <div className="tab-pane fade" id="form-tabs-emergency" role="tabpanel">
               <div className="mb-3 d-flex justify-content-start">
-                <p className="d-inline fs-4  ">Emergency Contact</p>
-                <p className="d-inline p-2  text-danger ">*Required</p>
+                <p className="d-inline fs-4">Emergency Contact</p>
+                <p className="d-inline p-2 text-danger">*</p>
               </div>
-              <form
-                className="needs-validation"
-                noValidate=""
-                id="bs-validation-form2"
-              >
-                <div className="mb-3">
-                  <label
-                    className="form-label d-flex justify-content-start"
-                    htmlFor="bs-validation-name"
-                  >
-                    NAME
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="bs-validation-name"
-                    placeholder="John Doe"
-                    required
-                  />
-                  <div className="invalid-feedback" />
-                </div>
-                <div className="mb-3">
-                  <label
-                    className="form-label d-flex justify-content-start"
-                    htmlFor="bs-validation-name"
-                  >
-                    RELATIONSHIP
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="bs-validation-name"
-                    placeholder="John Doe"
-                    required
-                  />
-                  <div className="invalid-feedback" />
-                </div>
-                <div className="mb-3">
-                  <label
-                    className="form-label d-flex justify-content-start"
-                    htmlFor="bs-validation-mobile"
-                  >
-                    WORK TELEPHONE
-                  </label>
-                  <input
-                    type="tel"
-                    id="bs-validation-mobile"
-                    className="form-control"
-                    placeholder="+94XXXXXXXXXX"
-                    aria-label="john.doe"
-                    required
-                  />
-                  <div className="invalid-feedback">
-                    Please enter a valid number
+              <form className="needs-validation" noValidate id="bs-validation-form1">
+                <div className="mb-3" data-repeater-list="group-a">
+                  <div className="mb-3" data-repeater-item>
+                    <label className="form-label d-flex justify-content-start" htmlFor="bs-validation-name">
+                      NAME
+                    </label>
+                    <input type="text" className="form-control mb-3" id="bs-validation-name" placeholder="John Doe" required />
+                    <div className="invalid-feedback" />
+                    <label className="form-label d-flex justify-content-start" htmlFor="bs-validation-relationship">
+                      RELATIONSHIP
+                    </label>
+                    <input type="text" className="form-control mb-3" id="bs-validation-relationship" placeholder="Relationship" required />
+                    <div className="invalid-feedback" />
+                    <label className="form-label d-flex justify-content-start" htmlFor="bs-validation-mobile">
+                      WORK TELEPHONE
+                    </label>
+                    <input type="tel" id="bs-validation-mobile" className="form-control" placeholder="+94XXXXXXXXXX" aria-label="john.doe" required />
+                    <div className="invalid-feedback">Please enter a valid number</div>
+                    <div className="col-lg-12 col-12 d-flex justify-content-end align-items-center mb-3 mt-4">
+                      <button type="button" className="btn btn-label-danger mb-4 w-15" data-repeater-delete="">
+                        <i className="bx bx-plus me-1" />
+                        <span className="align-middle" style={{ fontSize: "15px" }}>Remove</span>
+                      </button>
+                    </div>
+                    <hr />
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-12 d-flex justify-content-start">
-                    <button type="submit" className="btn btn-primary">
-                      Submit
-                    </button>
-                    <button
-                      type="reset"
-                      className="btn btn-label-secondary ml-4"
-                      fdprocessedid="mo4gu"
-                    >
-                      Cancel
-                    </button>
+                  <div className="col-12 d-flex justify-content-between">
+                    <div>
+                      <button type="submit" className="btn btn-primary">
+                        Submit
+                      </button>
+                    </div>
+                    <div>
+                      <button className="btn btn-primary" type="button" id="addRepeater3">
+                        <i className="bx bx-plus me-1" />
+                        <span className="align-middle" style={{ fontSize: "15px" }}>Add More</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </form>
