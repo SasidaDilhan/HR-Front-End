@@ -5,16 +5,8 @@ import Image1 from '../avatars/12.png'
 function UserProfile() {
   return (
     <>
-        <div className="content-wrapper">
-          {/* Content */}
-          
-            <h4 className="py-3 mb-4 mt-3 " id='user'>User Profile</h4>
-            {/*              Content*/}
-            <div className="content-wrapper ">
-              {/* Content */}
-              <div className="container-xxl flex-grow-1 container-p-y " id='card12'>
-                {/*                  <h4 class="py-3 mb-4"><span class="text-muted fw-light"></span> Leave Profile</h4>*/}
-                {/* Basic Layout & Basic with Icons */}
+        <div className="container-xxl flex-grow-1 container-p-y " id='card12'>
+        <h4 className="py-3 mb-4 mt-3">User Profile</h4>
                 <div className="row">
                   <div className="col card m-2">
                     <h4 className="mt-2">Basic Details</h4>
@@ -672,13 +664,6 @@ function UserProfile() {
                   </div>
                 </div>
               </div>
-              {/*              Content*/}
-            </div>
-           
-          
-          
-          {/* Content wrapper */}
-        </div>
     </>
   )
 }

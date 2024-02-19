@@ -14,8 +14,10 @@ import Leave from "./pages/Leave";
 import LeaveHistory from "./pages/LeaveHistory";
 import RegisterForm from "./pages/RegisterForm";
 import Login from "./pages/Login";
+import FingerPrint from "./pages/FingerPrint";
 import UserProfile from "./pages/UserProfile";
 import AttendanceIssues from "./pages/AttendanceIssues";
+
 
 function App() {
   useEffect(() => {
@@ -33,6 +35,7 @@ function App() {
       toggle.removeEventListener("click", toggleSidebar);
     };
   }, []);
+
   return (
     <div className="App">
       <Router>
@@ -54,9 +57,9 @@ function App() {
               <Route path="/leave-profile" element={<Leave />} />
               <Route path="/leave-history" element={<LeaveHistory />} />
               <Route path="/register" element={<RegisterForm />} />
+                      <Route path="/finger-print" element={<FingerPrint />} />
               <Route path="/attendance-issues" element={<AttendanceIssues />} />
             </Routes>
-           
           </div>
         </div>
       </Router>
