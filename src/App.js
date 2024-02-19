@@ -54,7 +54,7 @@ function App() {
               <Route path="/leave-history" element={<LeaveHistory />} />
               <Route path="/register" element={<RegisterForm />} />
             </Routes>
-            rodhfaf
+           
           </div>
         </div>
       </Router>
