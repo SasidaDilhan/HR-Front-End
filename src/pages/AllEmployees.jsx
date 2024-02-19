@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../css/Employee.css'
 
 
 function AllEmployees() {
@@ -10,7 +11,7 @@ function AllEmployees() {
         <h4 className="py-3 mb-4">Employees</h4>
         {/*              Content*/}
         {/*               search bar*/}
-       <div className="bg-white p-4 rounded">
+       <div className=" card mb-3 p-3">
        <div className="input-group input-group-merge mt-3 " id="search">
           <span className="input-group-text" id="basic-addon-search31">
             <i className="bx bx-search" />
@@ -26,12 +27,12 @@ function AllEmployees() {
         <div className="row py-2 ">
           <div className="col-lg col-12">
             <div>
-              <div className="row">
-                <div className="col-12 mb-2 mb-md-0 col-md">
+              <div className="row ">
+                <div className="col-12 mb-2 mb-md-0 col-md ">
                   <div>
                     <select
-                      className="form-select"
-                      id="exampleFormControlSelect1"
+                      className="form-select "
+                      
                       aria-label="Default select example"
                     >
                       <option selected="">By Branch</option>
@@ -45,7 +46,7 @@ function AllEmployees() {
                   <div>
                     <select
                       className="form-select"
-                      id="exampleFormControlSelect2"
+                     
                       aria-label="Default select example"
                     >
                       <option selected="">By Department</option>
@@ -59,7 +60,7 @@ function AllEmployees() {
                   <div>
                     <select
                       className="form-select"
-                      id="exampleFormControlSelect3"
+                    
                       aria-label="Default select example"
                     >
                       <option selected="">By Category</option>
@@ -71,19 +72,20 @@ function AllEmployees() {
               </div>
             </div>
           </div>
-          <div className="col-lg mt-lg-0  mt-2 col-12 d-flex justify-content-end">
+          <div className="mt-3 ">
             <button type="button" className="btn btn-primary">
               <span>
-                <i className="uil uil-user-plus" />
+              <i class='bx bx-user-plus'></i>
               </span>
               Add Employee
             </button>
           </div>
         </div>
+        </div>
         {/*              add button*/}
         {/*              filter by */}
         {/*              table*/}
-        <div className="card" id="employees">
+        <div className="card " id="employees">
           <h5 className="card-header" id="emphead">All Employees</h5>
           <div className="table-responsive text-nowrap">
             <table className="table">
@@ -292,8 +294,58 @@ function AllEmployees() {
         {/*/ Basic Bootstrap Table */}
         {/*pagination */}
         
-       </div>
        
+        <div className="pegination-custom">
+        <nav aria-label="Page navigation" id="pagination">
+                <ul className="pagination">
+                  <li className="page-item first">
+                    <a className="page-link" href="javascript:void(0);">
+                      <i className="tf-icon bx bx-chevrons-left" />
+                    </a>
+                  </li>
+                  <li className="page-item prev">
+                    <a className="page-link" href="javascript:void(0);">
+                      <i className="tf-icon bx bx-chevron-left" />
+                    </a>
+                  </li>
+                  <li className="page-item">
+                    <a className="page-link" href="javascript:void(0);">
+                      1
+                    </a>
+                  </li>
+                  <li className="page-item">
+                    <a className="page-link" href="javascript:void(0);">
+                      2
+                    </a>
+                  </li>
+                  <li className="page-item active">
+                    <a className="page-link" href="javascript:void(0);">
+                      3
+                    </a>
+                  </li>
+                  <li className="page-item">
+                    <a className="page-link" href="javascript:void(0);">
+                      4
+                    </a>
+                  </li>
+                  <li className="page-item">
+                    <a className="page-link" href="javascript:void(0);">
+                      5
+                    </a>
+                  </li>
+                  <li className="page-item next">
+                    <a className="page-link" href="javascript:void(0);">
+                      <i className="tf-icon bx bx-chevron-right" />
+                    </a>
+                  </li>
+                  <li className="page-item last">
+                    <a className="page-link" href="javascript:void(0);">
+                      <i className="tf-icon bx bx-chevrons-right" />
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+        </div>
      
       </div>
      
