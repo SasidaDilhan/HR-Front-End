@@ -461,13 +461,8 @@ export default function () {
 
   return (
     <div>
-      <div className="">
-        
-        {/* <div class="card"> */}
-        {/* <div class="">
-    <div class="col">
-      <div class="card-body"> */}
-        <div className="nav-align-top mb-3 container-lg" >
+      
+        <div className="nav-align-top mb-3 container-xxl" >
         <h4 className="py-3 mb-4">Register</h4>
           <ul className="nav nav-tabs" role="tablist">
             <li className="nav-item" role="presentation">
@@ -1382,7 +1377,7 @@ export default function () {
           </div>
         </div>
         {/*              Content*/}
-      </div>
+      
     </div>
   );
 }
