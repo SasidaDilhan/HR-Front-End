@@ -4,13 +4,13 @@ import "../css/LeaveHistory.css";
 function LeaveHistory() {
   return (
     <>
-      <div className="container-xxl flex-grow-1 container-p-y">
-        <div className="row g-4 mb-4">
-          <div className="col-sm-6 col-xl-4">
+      <div className="container-xxl flex-grow-1 container-p-y ">
+        <div className="row p-0 m-0 mb-4  d-flex justify-content-center">
+          <div className="col-4">
             <div className="card">
               <div className="card-body">
                 <div className="d-flex align-items-start justify-content-between">
-                  <div className="content-left">
+                  <div className="">
                     <span>All Leaves</span>
                     <div className="d-flex align-items-end mt-2">
                       <h4 className="mb-0 me-2">30</h4>
@@ -26,7 +26,7 @@ function LeaveHistory() {
               </div>
             </div>
           </div>
-          <div className="col-sm-6 col-xl-4 ml-sm-3 ">
+          <div className="col-4 ">
             <div className="card">
               <div className="card-body">
                 <div className="d-flex align-items-start justify-content-between">
@@ -46,7 +46,7 @@ function LeaveHistory() {
               </div>
             </div>
           </div>
-          <div className="col-sm-6 col-xl-4">
+          <div className="col-4">
             <div className="card">
               <div className="card-body">
                 <div className="d-flex align-items-start justify-content-between">

@@ -3,18 +3,18 @@
 }
 
 .nav-align-top {
-  margin-top: 20px; /* Adjust the top margin as needed */
+  margin-top: 20px; 
 }
 
 .addmore {
   margin-left: 550px;
 }
 
-/* Custom CSS for changing selected tab color to blue */
-/* Custom CSS for changing selected tab color to blue */
+
+
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link:focus {
-  background-color: #696cff; /* Change to your desired blue color */
-  border-color: #696cff; /* Border color */
-  color: white !important; /* Text color */
+  background-color: #696cff; 
+  border-color: #696cff; 
+  color: white !important; 
 }
