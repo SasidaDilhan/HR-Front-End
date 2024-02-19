@@ -922,7 +922,7 @@ export default function () {
                           src="#"
                           alt="Preview"
                           style={{ display: "none" }}
-                          class="max-w-full max-h-48 rounded-md"
+                          class="w-20 h-48 rounded-md"
                         />
                       </div>
                       <div class="invalid-feedback">
@@ -1410,14 +1410,14 @@ export default function () {
               <div className="mb-3">
                 <p className="d-inline fs-4 d-flex justify-content-start mb-4">Dependent Details</p>
               </div>
-              <form className="needs-validation" noValidate id="bs-validation-form">
+              <form className=""  id="bs-validation-form">
                 <div className="mb-3" data-repeater-list="group-a">
                   <div className="mb-3" data-repeater-item>
-                    <label className="form-label d-flex justify-content-start" htmlFor="bs-validation-name">DEPENDENT NAME</label>
-                    <input type="text" className="form-control mb-4" id="bs-validation-name" placeholder="John Doe" required />
+                    <label className="form-label d-flex justify-content-start" htmlFor="">DEPENDENT NAME</label>
+                    <input type="text" className="form-control mb-4" id="" placeholder="John Doe"/>
                     <div className="invalid-feedback" />
-                    <label className="form-label d-flex justify-content-start" htmlFor="bs-validation-relationship">RELATIONSHIP</label>
-                    <input type="text" className="form-control" id="bs-validation-relationship" placeholder="Relationship" />
+                    <label className="form-label d-flex justify-content-start" htmlFor="">RELATIONSHIP</label>
+                    <input type="text" className="form-control" id="" placeholder="Relationship" />
                     <div className="col-lg-12 col-12 d-flex justify-content-end align-items-center mb-3 mt-4">
                       <button type="button" className="btn btn-label-danger mb-4 w-15" data-repeater-delete id="confirm-color">
                         <i className="bx bx-plus me-1 " />
