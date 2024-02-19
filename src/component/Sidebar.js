@@ -393,7 +393,7 @@ export default function Sidebar() {
                             activeMenuItem === "pending" ? "18px" : "16px",
                         }}
                       >
-                        Pending Profile
+                        Pending Leaves
                       </span>
                     </Link>
                   </li>
