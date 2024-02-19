@@ -10,11 +10,11 @@ import Notice from "./pages/Notice";
 import AllEmployees from "./pages/AllEmployees";
 import PendingLeaves from "./pages/PendingLeaves";
 import Attendance from "./pages/Attendance";
-import User_profile from "./pages/User_profile";
 import Leave from "./pages/Leave";
 import LeaveHistory from "./pages/LeaveHistory";
 import RegisterForm from "./pages/RegisterForm";
 import Login from "./pages/Login";
+import UserProfile from "./pages/UserProfile";
 
 function App() {
   useEffect(() => {
@@ -49,7 +49,7 @@ function App() {
               <Route path="/pending-leaves" element={<PendingLeaves />} />
               <Route path="/attendence" element={<Attendance />} />
 
-              <Route path="/user-profile" element={<User_profile />} />
+              <Route path="/user-profile" element={<UserProfile />} />
               <Route path="/leave-profile" element={<Leave />} />
               <Route path="/leave-history" element={<LeaveHistory />} />
               <Route path="/register" element={<RegisterForm />} />
