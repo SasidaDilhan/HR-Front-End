@@ -49,9 +49,6 @@ export default function NavBar() {
                 </div>
               </a>
             </li>
-            <li>
-              <div className="dropdown-divider" />
-            </li>
           </ul>
           {/*/ User */}
         </div>

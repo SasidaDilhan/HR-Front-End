@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/demo.css';
-import Image from '../avatars/logo.png'
+// import Image from '../avatars/logo.png'
 
 function Login() {
     const togglePasswordVisibility = () => {

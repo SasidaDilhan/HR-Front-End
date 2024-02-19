@@ -261,7 +261,7 @@ function Attendance() {
                
                 {/*              Content*/}
               </div>
-              <div className="content-backdrop fade" />
+    
                </div>
             </div>
             {/* Content wrapper */}
