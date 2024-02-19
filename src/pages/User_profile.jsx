@@ -675,7 +675,7 @@ function User_profile() {
               {/*              Content*/}
             </div>
            
-            <div className="content-backdrop fade" />
+          
           </div>
           {/* Content wrapper */}
         </div>

@@ -384,7 +384,7 @@ function PendingLeaves() {
             </div>
             {/* Footer */}
             {/* / Footer */}
-            <div className="content-backdrop fade" />
+       
           </div>
           {/* Content wrapper */}
         </div>

@@ -6,7 +6,7 @@ function LeaveIssues() {
     <>
       <div className="content-wrapper">
         {/* Content */}
-        <div className="container-xxl flex-grow-1">
+        <div className="container-xxl">
           <h4 className="py-3 mb-4">Leave issues</h4>
 
           <div className="d-flex justify-content-start ">
@@ -265,7 +265,6 @@ function LeaveIssues() {
           {/*              Content*/}
         </div>
 
-        <div className="content-backdrop fade" />
       </div>
     </>
   );

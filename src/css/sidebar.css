@@ -262,12 +262,6 @@ header .image-text .profession {
   display: flex;
 }
 
-.home {
-  flex: 1; /* This will make the home section take up remaining space */
-  display: flex;
-  flex-direction: column;
-}
-
 .navbar,
 .register-form {
   margin-left: 30px; /* Adjust as needed */

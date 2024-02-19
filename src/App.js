@@ -39,7 +39,7 @@ function App() {
           <div className="col-2 ">
             <SideBar />
           </div>
-          <div className="col-10  content-body">
+          <div className="col-10  content-body ">
             <NavBar />
             <Routes>
               <Route path="/" element={<Login />} />

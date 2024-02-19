@@ -174,8 +174,6 @@ function Notice() {
           </div>
           {/*              Content*/}
         </div>
-
-        <div className="content-backdrop fade" />
       </div>
     </>
   );
