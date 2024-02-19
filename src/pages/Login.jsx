@@ -1,6 +1,8 @@
 import React from 'react'
 import '../css/demo.css';
+import { Link } from 'react-router-dom';
 // import Image from '../avatars/logo.png'
+
 
 function Login() {
     const togglePasswordVisibility = () => {
@@ -95,9 +97,9 @@ function Login() {
               </div>
             </div>
             <div className="mb-3">
-              <button className="btn btn-primary d-grid w-100" type="submit">
+              <Link to={'/lol'}><button className="btn btn-primary d-grid w-100" type="submit">
                 LOGIN
-              </button>
+              </button></Link>
             </div>
           </form>
           </div>
