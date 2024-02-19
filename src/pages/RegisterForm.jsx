@@ -461,12 +461,14 @@ export default function () {
 
   return (
     <div>
-      <div className="col-md-6 mb-4 center-cad">
+      <div className="">
+        
         {/* <div class="card"> */}
         {/* <div class="">
     <div class="col">
       <div class="card-body"> */}
         <div className="nav-align-top mb-3 container-lg" >
+        <h4 className="py-3 mb-4">Register</h4>
           <ul className="nav nav-tabs" role="tablist">
             <li className="nav-item" role="presentation">
               <button

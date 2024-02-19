@@ -246,7 +246,7 @@ function Leave() {
         </div>
         {/* / Content */}
         
-     
+        <div className="content-backdrop fade" />
       </div>
     </div>
   );
