@@ -6,13 +6,10 @@ function Attendance() {
   return (
     <div>
       
-            {/* Content wrapper */}
-            <div className="content-wrapper ">
-              {/* Content */}
-              <div className="container-xxl flex-grow-1">
+      <div className="container-xxl flex-grow-1">
                 <h4 className="py-3 mb-4">Attendance</h4>
                 {/*              Content*/}
-               <div className="bg-white p-4 rounded">
+               <div className="">
                <div
                   className="input-group input-group-merge mb-5"
                   id="attendanceSearch"
@@ -29,13 +26,13 @@ function Attendance() {
                   />
                 </div>
                 <div className="row" id="personal">
-                  <div className="col card m-2">
-                    <h5 className="card-title" style={{ marginTop: 10 }}>
+                  <div className="col card m-3 ">
+                    <h5 className="card-title mt-2">
                       Personal Details
                     </h5>
                     <div className="row">
                       <div className="col">
-                        <div style={{ marginBottom: 20, marginRight: 20 }}>
+                        <div className="mb-5 mr-5">
                           <img
                             src={Img1}
                             alt="profile"
@@ -44,9 +41,9 @@ function Attendance() {
                           <p id="userId">ID - 15567</p>
                         </div>
                       </div>
-                      <div className="col-4 p-0" style={{ marginTop: "-15px" }}>
+                      <div className="col-4 p-0 mt-3">
                         <div>
-                          <p style={{ marginTop: 20 }}>Name :</p>
+                          <p>Name :</p>
                         </div>
                         <div>
                           <p>Department:</p>
@@ -59,8 +56,8 @@ function Attendance() {
                         </div>
                       </div>
                       <div
-                        className="col-4 opacity-75"
-                        style={{ marginTop: 9 }}
+                        className="col-4 opacity-75 mt-3"
+                      
                         id="profile"
                       >
                         <p>Purna Lakshitha</p>
@@ -70,10 +67,10 @@ function Attendance() {
                       </div>
                     </div>
                   </div>
-                  <div className="col card m-2">
+                  <div className="col card m-3">
                     <div className="row">
-                      <div className=" " style={{ marginTop: 12 }}>
-                        <h5 className="card-title">Contact Details</h5>
+                      <div className=" " >
+                        <h5 className="card-title mt-2">Contact Details</h5>
                         <div className=" row">
                           <div className="d-flex justify-content-center mt-3">
                             <div
@@ -98,6 +95,7 @@ function Attendance() {
                     </div>
                   </div>
                 </div>
+                <div className="card p-5 mt-5 ml-2 mr-3">
                 <div className="row mt-1" id="date">
                   <div className="mb-3 w-20 ">
                     <div className="">
@@ -218,7 +216,7 @@ function Attendance() {
                                   className="dropdown-item"
                                   href="javascript:void(0);"
                                 >
-                                  <i className="uil uil-save me-1" /> Save
+                                  <i className="bx bx-save me-1" /> Save
                                 </a>
                               </div>
                             </div>
@@ -258,13 +256,12 @@ function Attendance() {
                     </table>
                   </div>
                 </div>
+                </div>
                
                 {/*              Content*/}
               </div>
     
                </div>
-            </div>
-            {/* Content wrapper */}
           </div>
        
   );
