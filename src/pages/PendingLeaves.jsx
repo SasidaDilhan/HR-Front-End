@@ -5,83 +5,74 @@ function PendingLeaves() {
   return (
    <>
     
-    <div className="layout-wrapper layout-content-navbar">
-      <div className="layout-container">
-        {/* Menu */}
-        
-        {/* / Menu */}
-        {/* Layout container */}
-        <div className="layout-page">
-          {/*          Nav Bar*/}
-         
-          {/*          Nav Bar*/}
-          {/* Content wrapper */}
-          <div className="content-wrapper ">
-            {/* Content start */}
-            <div className="container-xxl flex-grow-1 ">
+    <div className="container-xxl flex-grow-1 ">
               <h4 className="py-3 mb-4">Employees</h4>
               {/*              Content*/}
               {/*               search bar*/}
-              <div className="input-group input-group-merge " id="search">
-                <span className="input-group-text" id="basic-addon-search31">
-                  <i className="bx bx-search" />
-                </span>
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Search..."
-                  aria-label="Search..."
-                  aria-describedby="basic-addon-search31"
-                />
-              </div>
-              {/*              filter by */}
-             <div className=" filters">
-             <div className="container filter-item" >
-                <div className="row ">
-                  <div className="col-md-4 filter-item2" >
-                    <div className="mb-3">
-                      <select
-                        className="form-select"
-                        id="exampleFormControlSelect1"
-                        aria-label="Default select example"
-                      >
-                        <option selected="">By Branch</option>
-                        <option value={1}>Colombo</option>
-                        <option value={2}>Ratnapura</option>
-                        <option value={3}>Galle</option>
-                      </select>
-                    </div>
+              <div className=" card mb-3 p-3">
+       <div className="input-group input-group-merge mt-3 " id="search">
+          <span className="input-group-text" id="basic-addon-search31">
+            <i className="bx bx-search" />
+          </span>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Search..."
+            aria-label="Search..."
+            aria-describedby="basic-addon-search31"
+          />
+        </div>
+        <div className="row py-2 ">
+          <div className="col-lg col-12">
+            <div>
+              <div className="row ">
+                <div className="col-12 mb-2 mb-md-0 col-md ">
+                  <div>
+                    <select
+                      className="form-select "
+                      
+                      aria-label="Default select example"
+                    >
+                      <option selected="">By Branch</option>
+                      <option value={1}>Colombo</option>
+                      <option value={2}>Ratnapura</option>
+                      <option value={3}>Galle</option>
+                    </select>
                   </div>
-                  <div className="col-md-4" >
-                    <div className="mb-3">
-                      <select
-                        className="form-select"
-                        id="exampleFormControlSelect2"
-                        aria-label="Default select example"
-                      >
-                        <option selected="">By Department</option>
-                        <option value={1}>Gem</option>
-                        <option value={2}>Jewellery</option>
-                        <option value={3}>License</option>
-                      </select>
-                    </div>
+                </div>
+                <div className="col-12 mb-2 mb-md-0 col-md">
+                  <div>
+                    <select
+                      className="form-select"
+                     
+                      aria-label="Default select example"
+                    >
+                      <option selected="">By Department</option>
+                      <option value={1}>Gem</option>
+                      <option value={2}>Jewellery</option>
+                      <option value={3}>License</option>
+                    </select>
                   </div>
-                  <div className="col-md-4" >
-                    <div className="mb-3">
-                      <select
-                        className="form-select"
-                        id="exampleFormControlSelect3"
-                        aria-label="Default select example"
-                      >
-                        <option selected="">By Category</option>
-                        <option value={1}>Standard</option>
-                        <option value={2}>PL</option>
-                      </select>
-                    </div>
+                </div>
+                <div className="col-12 mb-2 mb-md-0 col-md">
+                  <div>
+                    <select
+                      className="form-select"
+                    
+                      aria-label="Default select example"
+                    >
+                      <option selected="">By Category</option>
+                      <option value={1}>Standard</option>
+                      <option value={2}>PL</option>
+                    </select>
                   </div>
                 </div>
               </div>
-             </div>
+            </div>
+          </div>
+          
+        </div>
+        </div>
               {/*              table*/}
               <div className="card" id="leavesTable">
                 <h5 className="card-header">Pending Leaves</h5>
@@ -331,6 +322,7 @@ function PendingLeaves() {
               </div>
               {/*/ Basic Bootstrap Table */}
               {/*pagination */}
+              <div className="pegination-custom">
               <nav aria-label="Page navigation" id="pagination">
                 <ul className="pagination">
                   <li className="page-item first">
@@ -380,17 +372,9 @@ function PendingLeaves() {
                   </li>
                 </ul>
               </nav>
+              </div>
             
             </div>
-            {/* Footer */}
-            {/* / Footer */}
-       
-          </div>
-          {/* Content wrapper */}
-        </div>
-        {/* / Layout page */}
-      </div>
-    </div>
 
 
    </>
