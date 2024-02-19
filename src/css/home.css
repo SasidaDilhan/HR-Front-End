@@ -1,14 +1,5 @@
 /* Update the CSS in your home.css file */
 
-.home {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  position: relative; /* Ensure relative positioning for absolutely positioned children */
-  transition: var(--tran-05); /* Add transition for smooth animation */
-}
-
-
 .content {
   padding: 10px;
   margin-right: 70px; /* Adjust this value to change the gap between sidebar and navbar */
@@ -19,24 +10,8 @@
   margin-right: 300px; /* Adjust based on the width of your sidebar */
 }
 
-@media (max-width: 800px) {
-  .layout-container {
-    flex-direction: column;
-  }
 
-  .layout-container .home,
-  .layout-container .sidebar {
-    width: 100%;
-  }
 
-  .content {
-    margin-right: 0; /* Reset margin for smaller screens */
-  }
-
-  .sidebar-open .home {
-    margin-right: 0; /* Adjust based on the width of your sidebar for smaller screens */
-  }
-}
 /* CSS in sidebar.css */
 
 /* Adjust sidebar width for smaller screens */
