@@ -15,6 +15,7 @@ import Leave from "./pages/Leave";
 import LeaveHistory from "./pages/LeaveHistory";
 import RegisterForm from "./pages/RegisterForm";
 import Login from "./pages/Login";
+import AttendanceIssues from "./pages/AttendanceIssues";
 
 function App() {
   useEffect(() => {
@@ -53,6 +54,7 @@ function App() {
               <Route path="/leave-profile" element={<Leave />} />
               <Route path="/leave-history" element={<LeaveHistory />} />
               <Route path="/register" element={<RegisterForm />} />
+              <Route path="/attendance-issues" element={<AttendanceIssues />} />
             </Routes>
            
           </div>
