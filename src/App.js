@@ -17,6 +17,7 @@ import Login from "./pages/Login";
 import UserProfile from "./pages/UserProfile";
 import AttendanceIssues from "./pages/AttendanceIssues";
 
+
 function App() {
   useEffect(() => {
     const body = document.querySelector("body");
@@ -56,7 +57,6 @@ function App() {
               <Route path="/register" element={<RegisterForm />} />
               <Route path="/attendance-issues" element={<AttendanceIssues />} />
             </Routes>
-           
           </div>
         </div>
       </Router>
