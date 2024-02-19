@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/profile.module.css'
+import '../css/profile.css'
 import Image1 from '../avatars/12.png'
 
 function UserProfile() {
@@ -8,11 +8,11 @@ function UserProfile() {
         <div className="content-wrapper">
           {/* Content */}
           
-            <h4 className="py-3 mb-4 ">User Profile</h4>
+            <h4 className="py-3 mb-4 mt-3 " id='user'>User Profile</h4>
             {/*              Content*/}
             <div className="content-wrapper ">
               {/* Content */}
-              <div className="container-xxl flex-grow-1 container-p-y ">
+              <div className="container-xxl flex-grow-1 container-p-y " id='card12'>
                 {/*                  <h4 class="py-3 mb-4"><span class="text-muted fw-light"></span> Leave Profile</h4>*/}
                 {/* Basic Layout & Basic with Icons */}
                 <div className="row">
@@ -37,9 +37,9 @@ function UserProfile() {
                         </h6>
                       </div>
                       <div className="col-4 mt-3 text-left  ">
-                        <h6>Supun Perera</h6>
+                        <h6>Supuni Perera</h6>
                         <h6>199845621478</h6>
-                        <h6>Male</h6>
+                        <h6>Female</h6>
                         <h6>30 Nov 1998</h6>
                       </div>
                     </div>
@@ -60,7 +60,7 @@ function UserProfile() {
                       </div>
                       <div className="col-4 text-left">
                         <h6>
-                          <p>supunperera@gmail.com</p>
+                          <p>supuniperera@gmail.com</p>
                           <p>No 45, Galle Road, Colombo</p>
                           <p>0774582123</p>
                         </h6>
