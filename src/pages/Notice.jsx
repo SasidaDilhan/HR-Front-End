@@ -5,6 +5,7 @@ function Notice() {
   return (
     <>
       <div className="container-xxl flex-grow-1">
+      <h4 className="py-3 mb-4">Notice</h4>
         {/*              Content*/}
         <div className="row">
           <div className=" w-100">
@@ -148,19 +149,19 @@ function Notice() {
                           is that it has a more-or-less normal distribution of
                           letters
                         </p>
-                        <div className="row mt-3 d-flex justify-content-end">
-                          <div className=" gap-2 col-lg-6" id="twobtn">
+                        <div className="row mt-5 gap-5 d-flex justify-content-end ">
+                         
                             <button
                               type="button"
-                              className="btn btn-primary w-px-100"
-                              id="lftbtn"
+                              className="btn btn-primary col-4"
+                              
                             >
                               Post
                             </button>
-                            <button type="button" className="btn btn-danger">
+                            <button type="button" className=" col-4 btn btn-danger ">
                               Cancel
                             </button>
-                          </div>
+                          
                         </div>
                       </div>
                     </div>
