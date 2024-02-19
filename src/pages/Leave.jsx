@@ -1505,36 +1505,7 @@ function Leave() {
                               </div>
                             </div>
                           </div>
-                          {/*                                                    <div class="row mt-3">*/}
-                          {/*                                                        <div class="col">*/}
-                          {/*                                                            <div class="mb-3 row">*/}
-                          {/*                                                                <label for="annualid"*/}
-                          {/*                                                                       class="form-label">Date</label>*/}
-                          {/*                                                                <div class="col-md-10">*/}
-                          {/*                                                                    <input class="form-control" type="date"*/}
-                          {/*                                                                           value="2021-06-18" id="maternityLeaveid"/>*/}
-                          {/*                                                                </div>*/}
-                          {/*                                                            </div>*/}
-                          {/*                                                        </div>*/}
-                          {/*                                                        <div class="col">*/}
-                          {/*                                                            <div class="mb-3">*/}
-                          {/*                                                                <label for="maternityLeaveid"*/}
-                          {/*                                                                       class="form-label">Sort by Status</label>*/}
-                          {/*                                                                <select class="form-select"*/}
-                          {/*                                                                        id="maternityselect"*/}
-                          {/*                                                                        aria-label="Default select example">*/}
-                          {/*                                                                    <option selected>Open this select menu</option>*/}
-                          {/*                                                                    <option value="1">Accept</option>*/}
-                          {/*                                                                    <option value="2">Reject</option>*/}
-                          {/*                                                                </select>*/}
-                          {/*                                                            </div>*/}
-                          {/*                                                        </div>*/}
-                          {/*                                                        <div class="col-2 text-center mt-4">*/}
-                          {/*                                                            <div>*/}
-                          {/*                                                                <h3 class="">Results : 0</h3>*/}
-                          {/*                                                            </div>*/}
-                          {/*                                                        </div>*/}
-                          {/*                                                    </div>*/}
+                         
                         </div>
                       </div>
                       {/*                            Table of leaves*/}
@@ -1577,7 +1548,7 @@ function Leave() {
         </div>
         {/* / Content */}
         
-     
+        <div className="content-backdrop fade" />
       </div>
     </div>
   )
