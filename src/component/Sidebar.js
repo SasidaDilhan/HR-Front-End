@@ -194,7 +194,7 @@ export default function Sidebar() {
                     <Link
                       to={"/attendence"}
                       className={`link-body-emphasis d-inline-flex text-decoration-none rounded ${
-                        activeMenuItem === "history" ? "active-menu-item" : ""
+                        activeMenuItem === "Attendance" ? "active-menu-item" : ""
                       }`}
                       style={{
                         marginLeft: "30px",
@@ -222,6 +222,41 @@ export default function Sidebar() {
                         }}
                       >
                         Attendance
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="menu-item">
+                    <Link
+                      to={"/attendance-issues"}
+                      className={`link-body-emphasis d-inline-flex text-decoration-none rounded ${
+                        activeMenuItem === "Attendance-issues" ? "active-menu-item" : ""
+                      }`}
+                      style={{
+                        marginLeft: "30px",
+
+                        opacity: "0.7",
+                      }}
+                      onClick={() => handleMenuItemClick("Attendance-issues")}
+                    >
+                      <span
+                        className="dot"
+                        style={{
+                          marginRight: "27px",
+                          color: activeMenuItem === "Attendance-issues" ? "blue" : "",
+                          fontSize:
+                            activeMenuItem === "Attendance-issues" ? "30px" : "12px",
+                        }}
+                      >
+                        &#8226;
+                      </span>{" "}
+                      <span
+                        style={{
+                          color: activeMenuItem === "Attendance-issues" ? "blue" : "",
+                          fontSize:
+                            activeMenuItem === "Attendance-issues" ? "18px" : "16px",
+                        }}
+                      >
+                        Attendance Issues
                       </span>
                     </Link>
                   </li>
