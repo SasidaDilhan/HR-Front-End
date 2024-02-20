@@ -10,13 +10,11 @@ export default function FingerPrint() {
             title: 'Finger Print',
             input: 'text',
             showCancelButton: false,
-            
-            
+ 
             preConfirm: (value) => {
                 setSuccessList([...successList, { index, value }]);
             }
         }).then(() => {
-            // Display success message after the value is added
             Swal.fire({
                 title: 'Success!',
                 icon: 'success',
@@ -43,6 +41,7 @@ export default function FingerPrint() {
     };
 
     const handleRemoveButtonClick = (index) => {
+        alert("Are you sure..?")
         setSuccessList(successList.filter(item => item.index !== index));
     };
 
