@@ -96,7 +96,7 @@ function MedicalLeaves() {
                                     htmlFor="exampleFormControlSelect1"
                                     className="form-label"
                                   >
-                                    Example select
+                                    Select Status
                                   </label>
                                   <select
                                     className="form-select"
@@ -106,9 +106,8 @@ function MedicalLeaves() {
                                     <option selected="">
                                       Open this select menu
                                     </option>
-                                    <option value={1}>One</option>
-                                    <option value={2}>Two</option>
-                                    <option value={3}>Three</option>
+                                    <option value={1}>Accept</option>
+                                    <option value={2}>Reject</option>
                                   </select>
                                 </div>
                               </div>
