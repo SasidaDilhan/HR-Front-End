@@ -1,5 +1,7 @@
 import React from 'react'
 import '../css/AttendanceIssues.css'
+import AddLeaves from './modals/AddLeaves'
+
 
 function AttendanceIssues() {
     return (
@@ -19,56 +21,7 @@ function AttendanceIssues() {
                         aria-describedby="basic-addon-search31"
                     />
                 </div>
-                <div className="row py-2 ">
-                    <div className="col-lg col-12">
-                        <div>
-                            <div className="row ">
-                                <div className="col-12 mb-2 mb-md-0 col-md ">
-                                    <div>
-                                        <select
-                                            className="form-select "
 
-                                            aria-label="Default select example"
-                                        >
-                                            <option selected="">By Branch</option>
-                                            <option value={1}>Colombo</option>
-                                            <option value={2}>Ratnapura</option>
-                                            <option value={3}>Galle</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className="col-12 mb-2 mb-md-0 col-md">
-                                    <div>
-                                        <select
-                                            className="form-select"
-
-                                            aria-label="Default select example"
-                                        >
-                                            <option selected="">By Department</option>
-                                            <option value={1}>Gem</option>
-                                            <option value={2}>Jewellery</option>
-                                            <option value={3}>License</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className="col-12 mb-2 mb-md-0 col-md">
-                                    <div>
-                                        <select
-                                            className="form-select"
-
-                                            aria-label="Default select example"
-                                        >
-                                            <option selected="">By Category</option>
-                                            <option value={1}>Standard</option>
-                                            <option value={2}>PL</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
             </div>
 
 
@@ -124,87 +77,37 @@ function AttendanceIssues() {
                                     <td>
                                         <button
                                             type="button"
-                                            className="btn btn-secondary"
+                                            className="btn btn-primary"
                                             data-bs-toggle="modal"
-                                            data-bs-target="#modalCenter"
+                                            data-bs-target="#largeModal"
                                         >
-                                            <span>
-                                                <i className="uil uil-setting me-1" />
-                                            </span>
-                                            Moderate
+                                            Add Leave
                                         </button>
-                                        {/* Modal */}
-                                        <div
-                                            className="modal fade"
-                                            id="modalCenter"
-                                            tabIndex={-1}
-                                            aria-hidden="true"
-                                        >
-                                            <div
-                                                className="modal-dialog modal-dialog-centered"
-                                                role="document"
-                                            >
-                                                <div className="modal-content">
-                                                    <div className="modal-header">
-                                                        <h5
-                                                            className="modal-title"
-                                                            id="modalCenterTitle"
-                                                        >
-                                                            Modal title
-                                                        </h5>
+
+                                        <div class="modal fade" id="largeModal" tabindex="-1" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel3">Create Leave</h5>
                                                         <button
                                                             type="button"
-                                                            className="btn-close"
+                                                            class="btn-close"
                                                             data-bs-dismiss="modal"
-                                                            aria-label="Close"
-                                                        />
+                                                            aria-label="Close"></button>
                                                     </div>
-                                                    <div className="modal-body">
-                                                        <div className='card modalcard '>
-                                                     
-                                                       <div className='row'>
-                                                        <div className='col-3'>
-                                                        <h6>Annual Leaves</h6>
-                                                        <span>Leave type</span>
-                                                            
-                                                        
-                                                        </div>
-                                                        <div className='col-3'>
-                                                        <h6>03Days</h6>
-                                                        <span>Leave type</span>
-                                                        
-                                                        </div>
-                                                        <div className='col-3'>
-                                                        <h6>2024/-01-30</h6>
-                                                        <span>Leave type</span>
-                                                        
-                                                        </div>
-                                                        <div className='col-3'>
-                                                        <h6>2024-02-02</h6>
-                                                        <span>Leave type</span>
-                                                       
-                                                        </div>
-                                                       </div>
-                                                        </div>
-                                                        <div className="modal-footer">
-                                                            <button
-                                                                type="button"
-                                                                className="btn btn-outline-secondary"
-                                                                data-bs-dismiss="modal"
-                                                            >
-                                                                Close
-                                                            </button>
-                                                            <button
-                                                                type="button"
-                                                                className="btn btn-primary"
-                                                            >
-                                                                Save changes
-                                                            </button>
-                                                        </div>
+                                                    <div class="modal-body">
+                                                        <AddLeaves />
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                                            Close
+                                                        </button>
+                                                        <button type="button" class="btn btn-primary">Save changes</button>
                                                     </div>
                                                 </div>
                                             </div>
-                                            </div>
+                                        </div>
+
                                     </td>
                                 </tr>
                                 <tr>

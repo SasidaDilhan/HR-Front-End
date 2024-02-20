@@ -1,5 +1,6 @@
 import React from "react";
 import '../css/PendingLeave.css'
+import AnnualLeaves from "./modals/AnnualLeaves";
 
 function PendingLeaves() {
   return (
@@ -108,109 +109,40 @@ function PendingLeaves() {
                     <span className="fw-medium">Standard</span>
                   </td>
                   <td>
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      data-bs-toggle="modal"
-                      data-bs-target="#modalCenter"
-                    >
-                      <span>
-                        <i className="uil uil-setting me-1" />
-                      </span>
-                      Moderate
-                    </button>
-                    {/* Modal */}
-                    <div
-                      className="modal fade"
-                      id="modalCenter"
-                      tabIndex={-1}
-                      aria-hidden="true"
-                    >
-                      <div
-                        className="modal-dialog modal-dialog-centered"
-                        role="document"
-                      >
-                        <div className="modal-content">
-                          <div className="modal-header">
-                            <h5
-                              className="modal-title"
-                              id="modalCenterTitle"
-                            >
-                              Modal title
-                            </h5>
-                            <button
-                              type="button"
-                              className="btn-close"
-                              data-bs-dismiss="modal"
-                              aria-label="Close"
-                            />
-                          </div>
-                          <div className="modal-body">
-                            <div className="row">
-                              <div className="col mb-3">
-                                <label
-                                  htmlFor="nameWithTitle"
-                                  className="form-label"
-                                >
-                                  Name
-                                </label>
-                                <input
-                                  type="text"
-                                  id="nameWithTitle"
-                                  className="form-control"
-                                  placeholder="Enter Name"
-                                />
-                              </div>
-                            </div>
-                            <div className="row g-2">
-                              <div className="col mb-0">
-                                <label
-                                  htmlFor="emailWithTitle"
-                                  className="form-label"
-                                >
-                                  Email
-                                </label>
-                                <input
-                                  type="email"
-                                  id="emailWithTitle"
-                                  className="form-control"
-                                  placeholder="xxxx@xxx.xx"
-                                />
-                              </div>
-                              <div className="col mb-0">
-                                <label
-                                  htmlFor="dobWithTitle"
-                                  className="form-label"
-                                >
-                                  DOB
-                                </label>
-                                <input
-                                  type="date"
-                                  id="dobWithTitle"
-                                  className="form-control"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <div className="modal-footer">
-                            <button
-                              type="button"
-                              className="btn btn-outline-secondary"
-                              data-bs-dismiss="modal"
-                            >
-                              Close
-                            </button>
-                            <button
-                              type="button"
-                              className="btn btn-primary"
-                            >
-                              Save changes
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
+                                        <button
+                                            type="button"
+                                            className="btn btn-secondary"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#largeModal"
+                                        >
+                                            Moderate
+                                        </button>
+
+                                        <div class="modal fade" id="largeModal" tabindex="-1" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel3">Leave Approval</h5>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <AnnualLeaves />
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
+                                                            Reject
+                                                        </button>
+                                                        <button type="button" class="btn btn-success">Approve</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </td>
                 </tr>
                 <tr>
                   <td>
