@@ -17,6 +17,8 @@ import Login from "./pages/Login";
 import FingerPrint from "./pages/FingerPrint";
 import UserProfile from "./pages/UserProfile";
 import AttendanceIssues from "./pages/AttendanceIssues";
+import AnnualLeaves from "./pages/modals/AnnualLeaves";
+import AddLeaves from "./pages/modals/AddLeaves";
 
 
 function App() {
@@ -57,8 +59,10 @@ function App() {
               <Route path="/leave-profile" element={<Leave />} />
               <Route path="/leave-history" element={<LeaveHistory />} />
               <Route path="/register" element={<RegisterForm />} />
-                      <Route path="/finger-print" element={<FingerPrint />} />
+              <Route path="/finger-print" element={<FingerPrint />} />
               <Route path="/attendance-issues" element={<AttendanceIssues />} />
+              <Route path="/annual-leaves" element={<AnnualLeaves />} />
+              <Route path="/add-leaves" element={<AddLeaves />} />
             </Routes>
           </div>
         </div>
