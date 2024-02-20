@@ -1448,7 +1448,7 @@ export default function () {
             <div className="tab-pane fade" id="form-tabs-emergency" role="tabpanel">
               <div className="mb-3 d-flex justify-content-start">
                 <p className="d-inline fs-4">Emergency Contact</p>
-                <p className="d-inline p-2 text-danger">*</p>
+                <p className="d-inline p-2 text-danger">*Required</p>
               </div>
               <form className="needs-validation" noValidate id="bs-validation-form1">
                 <div className="mb-3" data-repeater-list="group-a">
