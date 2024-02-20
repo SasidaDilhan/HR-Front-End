@@ -11,6 +11,8 @@ import ShortLeaves from "../pages/leaveProfile/ShortLeaves";
 import HalfDayLeaves from "./leaveProfile/HalfDayLeaves";
 import LeaveToLeave from "./leaveProfile/LeaveToLeave";
 import MaternityLeaves from "./leaveProfile/MaternityLeaves";
+import Profile from "./leaveProfile/Profile";
+import ContactDetails from "./leaveProfile/ContactDetails";
 
 function Leave() {
   return (
@@ -23,54 +25,8 @@ function Leave() {
           </h4>
           {/* Basic Layout */}
           <div className="row">
-            <div className="col card m-2">
-              <h4 className="text-center mt-3">Personal Details</h4>
-              <div className="row">
-                <div className="col mb-3">
-                  <div className="mt-2 mr-5 ">
-                    <img
-                      src={Image1}
-                      alt="profile"
-                      className="rounded w-100 h-100"
-                    />
-                  </div>
-                </div>
-                <div className="col-4 p-0 text-left">
-                  <p className="fw-bold mt-3">Name :</p>
-                  <h6 className="fw-bold">Department:</h6>
-                  <h6 className="fw-bold">Employee Category :</h6>
-                  <h6 className="fw-bold">Branch :</h6>
-                </div>
-                <div className="col-4 text-left">
-                  <h6 className="mt-3">Purna Lakshitha</h6>
-                  <h6>Mining License</h6>
-                  <h6>Standard</h6>
-                  <h6>Rathnapura</h6>
-                </div>
-              </div>
-            </div>
-            <div className="col card m-2">
-              <div className="row">
-                <div className="col text-center mt-3">
-                  <h4>Contact Details</h4>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-2" />
-                <div className="col-1" />
-                <div className="col text-left">
-                  <h6 className="mt-3">Personal</h6>
-                  <h6>Personal</h6>
-                  <h6>Email</h6>
-                </div>
-                <div className="col text-left">
-                  <h6 className="mt-3">+94765320069</h6>
-                  <h6>+372250786</h6>
-                  <h6>purna@gamil.com</h6>
-                </div>
-                <div className="col" />
-              </div>
-            </div>
+            <Profile/>
+            <ContactDetails/>
             {/*                        three type of leaves*/}
             <div className="row mt-3">
               <div className="col">
