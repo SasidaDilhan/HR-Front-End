@@ -1,4 +1,5 @@
 import React from 'react'
+import Leavetoleave from './custom/leavetoleave.png'
 
 function LeaveToLeave() {
   return (
@@ -17,8 +18,8 @@ function LeaveToLeave() {
             <img
               className="h-px-100 w-px-100 rounded overflow-hidden "
               id="medicalimage"
-              
-              alt=''
+              src={Leavetoleave}
+              alt='leave to leave'
             />
             {/* <p class="mb-0">Total Leaves</p> */}
           </div>

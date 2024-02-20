@@ -1,4 +1,5 @@
 import React from 'react'
+import Cassual from './custom/Casual.png'
 
 function CasualLeaves() {
   return (
@@ -16,8 +17,9 @@ function CasualLeaves() {
             {/* <span>All Leaves</span> */}
             <img
               className="h-px-100 w-px-100 rounded overflow-hidden "
+              
               id="casualimage"
-              src="assets/img/custom/casual.png"
+              src={Cassual}
               alt="casual Imagej"
             />
             {/* <p class="mb-0">Total Leaves</p> */}

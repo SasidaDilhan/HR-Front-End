@@ -1,4 +1,5 @@
 import React from "react";
+import Maternity from './custom/maternity.png'
 
 function MaternityLeaves() {
   return (
@@ -17,7 +18,8 @@ function MaternityLeaves() {
               <img
                 className="h-px-100 w-px-100 rounded overflow-hidden "
                 id="medicalimage"
-                alt=""
+                src={Maternity}
+                alt="maternity"
               />
               {/* <p class="mb-0">Total Leaves</p> */}
             </div>

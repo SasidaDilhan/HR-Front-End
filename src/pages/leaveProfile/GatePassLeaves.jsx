@@ -1,4 +1,5 @@
 import React from 'react'
+import Gatepass from './custom/gatepass.png'
 
 function GatePassLeaves() {
   return (
@@ -18,8 +19,8 @@ function GatePassLeaves() {
             <img
               className="h-px-100 w-px-100 rounded overflow-hidden "
               id="medicalimage"
-              
-              alt=''
+              src={Gatepass}
+              alt='gatepass'
             />
             {/* <p class="mb-0">Total Leaves</p> */}
           </div>

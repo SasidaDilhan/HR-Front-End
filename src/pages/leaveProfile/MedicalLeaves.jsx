@@ -1,5 +1,5 @@
 import React from 'react'
-import Image2 from '../../avatars/11.png'
+import Image2 from './custom/medical.png'
 
 function MedicalLeaves() {
   return (

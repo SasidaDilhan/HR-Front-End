@@ -1,4 +1,5 @@
 import React from 'react'
+import Shortleave from './custom/shortleave.png'
 
 function ShortLeaves() {
   return (
@@ -17,8 +18,8 @@ function ShortLeaves() {
                               <img
                                 className="h-px-100 w-px-100 rounded overflow-hidden "
                                 id="medicalimage"
-                                
-                                alt=''
+                                src={Shortleave}
+                                alt='short leave'
                               />
                               {/* <p class="mb-0">Total Leaves</p> */}
                             </div>
