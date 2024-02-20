@@ -71,7 +71,7 @@ function MaternityLeaves() {
                     htmlFor="exampleFormControlSelect1"
                     className="form-label"
                   >
-                    Example select
+                    Select Status
                   </label>
                   <select
                     className="form-select"
@@ -79,9 +79,8 @@ function MaternityLeaves() {
                     aria-label="Default select example"
                   >
                     <option selected="">Open this select menu</option>
-                    <option value={1}>One</option>
-                    <option value={2}>Two</option>
-                    <option value={3}>Three</option>
+                    <option value={1}>Accept</option>
+                                    <option value={2}>Reject</option>
                   </select>
                 </div>
               </div>
@@ -106,7 +105,7 @@ function MaternityLeaves() {
                 <tr>
                   <th>From</th>
                   <th>To</th>
-                  <th>Reason</th>
+                 
                   <th>Status</th>
                 </tr>
               </thead>
@@ -116,11 +115,7 @@ function MaternityLeaves() {
                     <span className="fw-medium">2022/03/31</span>
                   </td>
                   <td>2022/04/31</td>
-                  <td>
-                    <div>
-                      <span className="fw-medium">Fever</span>
-                    </div>
-                  </td>
+                  
                   <td>
                     <span className="badge bg-label-primary me-1">Accept</span>
                   </td>
@@ -130,13 +125,9 @@ function MaternityLeaves() {
                     <span className="fw-medium">2022/03/31</span>
                   </td>
                   <td>2022/04/31</td>
+                  
                   <td>
-                    <div>
-                      <span className="fw-medium">wedding</span>
-                    </div>
-                  </td>
-                  <td>
-                    <span className="badge bg-label-danger me-1">Reject</span>
+                    <span className="badge bg-label-primary me-1">Accept</span>
                   </td>
                 </tr>
                 <tr>
@@ -144,11 +135,7 @@ function MaternityLeaves() {
                     <span className="fw-medium">2022/03/31</span>
                   </td>
                   <td>2022/04/31</td>
-                  <td>
-                    <div>
-                      <span className="fw-medium">Goto school</span>
-                    </div>
-                  </td>
+                  
                   <td>
                     <span className="badge bg-label-primary me-1">Accept</span>
                   </td>
