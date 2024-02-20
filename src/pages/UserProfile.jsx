@@ -557,11 +557,13 @@ function UserProfile() {
                                   <div className="fw-bold">
                                     <p>Dependent Name :</p>
                                     <p>Relationship :</p>
+                                    <p>DOB :</p>
                                   </div>
                                 </div>
                                 <div className="col-5">
-                                  <p>Aruni Perera</p>
-                                  <p>Wife</p>
+                                  <p>Aruna Perera</p>
+                                  <p>Husbund</p>
+                                  <p>15 Jan 1998</p>
                                 </div>
                               </div>
                               <div className="d-flex justify-content-end mx-5">
@@ -581,11 +583,13 @@ function UserProfile() {
                                   <div className="fw-bold">
                                     <p>Dependent Name :</p>
                                     <p>Relationship :</p>
+                                    <p>DOB :</p>
                                   </div>
                                 </div>
                                 <div className="col-5">
-                                  <p>Aruni Perera</p>
-                                  <p>Wife</p>
+                                  <p>Aruna Perera</p>
+                                  <p>Husband</p>
+                                  <p>16 Feb 1998</p>
                                 </div>
                               </div>
                               <div className="d-flex justify-content-end mx-5">
