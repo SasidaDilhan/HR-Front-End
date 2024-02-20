@@ -1,4 +1,5 @@
 import React from 'react'
+import Notcovering from './custom/notcovering.png'
 
 function NotCovering() {
   return (
@@ -17,8 +18,8 @@ function NotCovering() {
             <img
               className="h-px-100 w-px-100 rounded overflow-hidden "
               id="medicalimage"
-            
-              alt=''
+            src={Notcovering}
+              alt='not covering'
             />
             {/* <p class="mb-0">Total Leaves</p> */}
           </div>
@@ -30,7 +31,7 @@ function NotCovering() {
           <div className="d-flex align-items-start justify-content-between m-3">
             <div className="content-left">
               <div className="d-flex align-items-end mt-2">
-                <h4 className="mb-0 me-2">02 Days </h4>
+                <h4 className="mb-0 me-2">00 Days </h4>
               </div>
               <span>Taken</span>
             </div>
@@ -48,7 +49,7 @@ function NotCovering() {
           <div className="d-flex align-items-start justify-content-between m-3">
             <div className="content-left">
               <div className="d-flex align-items-end mt-2">
-                <h4 className="mb-0 me-2">05 Days </h4>
+                <h4 className="mb-0 me-2">02 Days </h4>
               </div>
               <span>Remaining</span>
               {/*                                        <p class="mb-0">Last week analytics </p>*/}

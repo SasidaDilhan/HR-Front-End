@@ -1,4 +1,6 @@
 import React from "react";
+import Annual from './custom/Annual.png'
+
 
 function AnnualLeaves() {
   return (
@@ -12,6 +14,7 @@ function AnnualLeaves() {
               {/* <span>All Leaves</span> */}
               <img
                 className="h-px-100 w-px-100 rounded overflow-hidden "
+               src={Annual}
                 id="medicalimage"
                 alt="medcalimage"
               />
@@ -25,7 +28,7 @@ function AnnualLeaves() {
             <div className="d-flex align-items-start justify-content-between m-3">
               <div className="content-left">
                 <div className="d-flex align-items-end mt-2">
-                  <h4 className="mb-0 me-2">1111 Days </h4>
+                  <h4 className="mb-0 me-2">2 Days </h4>
                 </div>
                 <span>Taken</span>
               </div>

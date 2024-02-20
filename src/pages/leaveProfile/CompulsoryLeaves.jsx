@@ -1,4 +1,5 @@
 import React from 'react'
+import Compulsory from './custom/compulsory.png'
 
 function CompulsoryLeaves() {
   return (
@@ -17,8 +18,8 @@ function CompulsoryLeaves() {
                               <img
                                 className="h-px-100 w-px-100 rounded overflow-hidden "
                                 id="medicalimage"
-                              
-                                alt=''
+                              src={Compulsory}
+                                alt='compulsory'
                               />
                               {/* <p class="mb-0">Total Leaves</p> */}
                             </div>
