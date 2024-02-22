@@ -553,6 +553,7 @@ export default function () {
 
   /* emergency details for repeater */
   useEffect(() => {
+ 
     const handleAddRepeaterButtonClick = (event) => {
       event.preventDefault();
 
@@ -713,7 +714,9 @@ export default function () {
               </button>
             </li>
           </ul>
+
           <div className="tab-content ">
+
             <div
               class="tab-pane fade active show"
               id="form-tabs-personal"
@@ -749,7 +752,7 @@ export default function () {
                           Please enter your first name.
                         </div>
                       </div>
-                      <div class="mb-3 col-xl-6">
+                      <div class="mb-2 col-xl-6">
                         <label
                           class="form-label d-flex justify-content-start"
                           for="bs-validation-last-name"
@@ -777,7 +780,7 @@ export default function () {
                         NIC
                       </label>
                       <input
-                        type="text"
+                        type="number"
                         className="form-control mb-3"
                         id="bs-validation-name"
                         placeholder="XXXXXXXXXXXXXXV"
@@ -890,11 +893,12 @@ export default function () {
                         MOBILE
                       </label>
                       <input
-                        type="tel"
+                        type="number"
                         id="bs-validation-mobile"
                         className="form-control"
                         placeholder="+1XXXXXXXXXX"
                         required
+                         
                       />
                       <div className="invalid-feedback">
                         Please enter a valid number
@@ -958,7 +962,7 @@ export default function () {
             >
               <div className=" d-flex justify-content-start">
                 <p className="d-inline fs-4 ">Current Work Details</p>
-                <p className="d-inline p-2 mb-3 text-danger ">*Required</p>
+                <p className="d-inline p-2 mb-2 text-danger ">*Required</p>
               </div>
               <form
                 className="needs-validation"
@@ -992,7 +996,7 @@ export default function () {
                   </label>
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control "
                     id="bs-validation-name"
                     placeholder="John Doe"
                     required
@@ -1003,7 +1007,7 @@ export default function () {
                 </div>
                 <div className="mb-3">
                   <label
-                    className="form-label d-flex justify-content-start"
+                    className="form-label d-flex justify-content-start mb-2"
                     htmlFor="basic-default-country"
                   >
                     DEPARTMENT
@@ -1015,11 +1019,10 @@ export default function () {
                     fdprocessedid="9ypqh3"
                   >
                     <option value="">select the department</option>
-                    <option value="usa">USA</option>
-                    <option value="uk">UK</option>
-                    <option value="france">France</option>
-                    <option value="australia">Australia</option>
-                    <option value="spain">Spain</option>
+                    <option value="usa">Gem</option>
+                    <option value="uk">Jewelry</option>
+                    <option value="france">License</option>
+                    
                   </select>
                 </div>
 
@@ -1091,7 +1094,7 @@ export default function () {
                     WORK TELEPHONE
                   </label>
                   <input
-                    type="tel"
+                    type="number"
                     id="bs-validation-mobile"
                     className="form-control "
                     placeholder="+94XXXXXXXXXX"
@@ -1134,7 +1137,7 @@ export default function () {
                     <div data-repeater-list="group-a">
                       <div data-repeater-item="">
                         <div className="row">
-                          <div className="mb-3 col-lg-12 col col-12 mb-0">
+                          <div className="mb-2 col-lg-12 col col-12 mb-0">
                             <label
                               className="form-label d-flex justify-content-start mt-3"
                               htmlFor="form-repeater-1-1"
@@ -1148,7 +1151,7 @@ export default function () {
                             />
                           </div>
                           <div className="row">
-                            <div className="mb-3 col-lg-12 col col-12 mb-0">
+                            <div className="mb-2 col-lg-12 col col-12 mb-0">
                               <label
                                 className="form-label d-flex justify-content-start"
                                 htmlFor="form-repeater-1-1"
@@ -1197,7 +1200,7 @@ export default function () {
                               readOnly="readonly"
                             />
                           </div>
-                          <div className="col-lg-12 col-12 d-flex justify-content-end align-items-center mb-3 mt-0">
+                          <div className="col-lg-12 col-12 d-flex justify-content-end align-items-center mb-2 mt-0">
                             {/* Center the Delete button */}
                             <button
                               type="button"
@@ -1418,8 +1421,8 @@ export default function () {
                     <div className="invalid-feedback" />
                     <label className="form-label d-flex justify-content-start" htmlFor="">RELATIONSHIP</label>
                     <input type="text" className="form-control" id="" placeholder="Relationship" />
-                    <div className="col-lg-12 col-12 d-flex justify-content-end align-items-center mb-3 mt-4">
-                      <button type="button" className="btn btn-label-danger mb-4 w-15" data-repeater-delete id="confirm-color">
+                    <div className="col-lg-12 col-12 d-flex justify-content-end align-items-center mb-5 mt-4">
+                      <button type="button" className="btn btn-label-danger   w-15" data-repeater-delete id="confirm-color">
                         <i className="bx bx-plus me-1 " />
                         <span className="align-middle" style={{ fontSize: "15px" }}>Remove</span>
                       </button>
@@ -1428,12 +1431,12 @@ export default function () {
                   </div>
                 </div>
                 <div className="mb-0 mt-3">
-                  <div className="row">
+                  <div className="">
                     <div className="col-12 d-flex justify-content-between">
                       <div>
                         <button type="submit" className="btn btn-primary">Next</button>
                       </div>
-                      <div>
+                      <div className="" style={{marginLeft:"auto"}}>
                         <button className="btn btn-primary" type="button" id="addRepeater2">
                           <i className="bx bx-plus me-1" />
                           <span className="align-middle" style={{ fontSize: "15px" }}>Add More</span>
@@ -1450,7 +1453,7 @@ export default function () {
                 <p className="d-inline fs-4">Emergency Contact</p>
                 <p className="d-inline p-2 text-danger">*Required</p>
               </div>
-              <form className="needs-validation" noValidate id="bs-validation-form1">
+              <form className="needs-validation" noValidate id="bs-validation-form1" style={{height:"auto"}}>
                 <div className="mb-3" data-repeater-list="group-a">
                   <div className="mb-3" data-repeater-item>
                     <label className="form-label d-flex justify-content-start" htmlFor="bs-validation-name">
@@ -1466,7 +1469,7 @@ export default function () {
                     <label className="form-label d-flex justify-content-start" htmlFor="bs-validation-mobile">
                       WORK TELEPHONE
                     </label>
-                    <input type="tel" id="bs-validation-mobile" className="form-control" placeholder="+94XXXXXXXXXX" aria-label="john.doe" required />
+                    <input type="number" id="bs-validation-mobile" className="form-control" placeholder="+94XXXXXXXXXX" aria-label="john.doe" required />
                     <div className="invalid-feedback">Please enter a valid number</div>
                     <div className="col-lg-12 col-12 d-flex justify-content-end align-items-center mb-3 mt-4">
                       <button type="button" className="btn btn-label-danger mb-4 w-15" data-repeater-delete="">
@@ -1474,10 +1477,10 @@ export default function () {
                         <span className="align-middle" style={{ fontSize: "15px" }}>Remove</span>
                       </button>
                     </div>
-                    <hr />
+                    <hr className="mb-3"/>
                   </div>
                 </div>
-                <div className="row">
+                <div className="">
                   <div className="col-12 d-flex justify-content-between">
                     <div>
                       <button type="submit" className="btn btn-primary">
@@ -1494,6 +1497,8 @@ export default function () {
                 </div>
               </form>
             </div>
+
+
           </div>
         </div>
         {/*              Content*/}

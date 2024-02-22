@@ -65,7 +65,7 @@ export default function FingerPrint() {
                             </thead>
                             <tbody className="table-border-bottom-0">
                                 <tr>
-                                    <td><span className="fw-medium">PT12345</span></td>
+                                    <td><span className="fw-medium" >PT12345</span></td>
                                     <td>Saman Kumara</td>
                                     <td>2000XXXXXXXX</td>
                                     <td>{renderButtonOrSuccess(0)}</td>
