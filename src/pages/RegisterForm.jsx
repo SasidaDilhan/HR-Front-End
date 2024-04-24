@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.css";
 import Swal from "sweetalert2";
@@ -6,7 +6,26 @@ import "../css/register.css";
 
 export default function () {
 
-  
+  const [category, setCategory] = useState('');
+  const [employeeTypeOptions, setEmployeeTypeOptions] = useState([]);
+
+  const handleCategoryChange = (event) => {
+    const selectedCategory = event.target.value;
+    setCategory(selectedCategory);
+    updateEmployeeTypeOptions(selectedCategory);
+  };
+
+  const updateEmployeeTypeOptions = (selectedCategory) => {
+    let options = [];
+    if (selectedCategory === 'standard') {
+      options = ['Intern', 'Permanent'];
+    } else if (selectedCategory === 'pl') {
+      options = ['Contract base', 'Daily base', 'Permanent'];
+    }
+    setEmployeeTypeOptions(options);
+  };
+
+
   /* date picker */
   useEffect(() => {
     const datePicker1 = document.getElementById("datepicker1");
@@ -300,7 +319,7 @@ export default function () {
       form.removeEventListener("click", handleDeleteButtonClick);
     };
 
-    
+
   }, []);
   /* end of previous work form repeater */
 
@@ -553,6 +572,7 @@ export default function () {
 
   /* emergency details for repeater */
   useEffect(() => {
+
     const handleAddRepeaterButtonClick = (event) => {
       event.preventDefault();
 
@@ -636,510 +656,522 @@ export default function () {
 
   return (
     <div>
-      
-        <div className="nav-align-top mb-3 container-xxl" >
+
+      <div className="nav-align-top mb-3 container-xxl" >
         <h4 className="py-3 mb-4">Register</h4>
-          <ul className="nav nav-tabs" role="tablist">
-            <li className="nav-item" role="presentation">
-              <button
-                className="nav-link active"
-                data-bs-toggle="tab"
-                data-bs-target="#form-tabs-personal"
-                role="tab"
-                aria-selected="true"
-                fdprocessedid="5s9r1"
-              >
-                Basic Details
-              </button>
-            </li>
-            <li className="nav-item" role="presentation">
-              <button
-                className="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#form-tabs-account"
-                role="tab"
-                aria-selected="false"
-                tabIndex={-1}
-              >
-                Work Details
-              </button>
-            </li>
-            <li className="nav-item" role="presentation">
-              <button
-                className="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#form-tabs-social"
-                role="tab"
-                aria-selected="false"
-                tabIndex={-1}
-              >
-                Previous Work
-              </button>
-            </li>
-            <li className="nav-item" role="presentation">
-              <button
-                className="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#form-tabs-education"
-                role="tab"
-                aria-selected="false"
-                tabIndex={-1}
-              >
-                Education Qualification
-              </button>
-            </li>
-            <li className="nav-item" role="presentation">
-              <button
-                className="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#form-tabs-dependent"
-                role="tab"
-                aria-selected="false"
-                tabIndex={-1}
-              >
-                Dependent Details
-              </button>
-            </li>
-            <li className="nav-item" role="presentation">
-              <button
-                className="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#form-tabs-emergency"
-                role="tab"
-                aria-selected="false"
-                tabIndex={-1}
-              >
-                Emergency
-              </button>
-            </li>
-          </ul>
-          <div className="tab-content ">
-            <div
-              class="tab-pane fade active show"
-              id="form-tabs-personal"
-              role="tabpanel"
+        <ul className="nav nav-tabs" role="tablist">
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link active"
+              data-bs-toggle="tab"
+              data-bs-target="#form-tabs-personal"
+              role="tab"
+              aria-selected="true"
+              fdprocessedid="5s9r1"
             >
-              <div class="d-flex justify-content-start mb-3">
-                <p class="d-inline fs-4">Basic Details</p>
-                <p class="d-inline p-2 text-danger">*Required</p>
-              </div>
+              Basic Details
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link"
+              data-bs-toggle="tab"
+              data-bs-target="#form-tabs-account"
+              role="tab"
+              aria-selected="false"
+              tabIndex={-1}
+            >
+              Work Details
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link"
+              data-bs-toggle="tab"
+              data-bs-target="#form-tabs-social"
+              role="tab"
+              aria-selected="false"
+              tabIndex={-1}
+            >
+              Previous Work
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link"
+              data-bs-toggle="tab"
+              data-bs-target="#form-tabs-education"
+              role="tab"
+              aria-selected="false"
+              tabIndex={-1}
+            >
+              Education Qualification
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link"
+              data-bs-toggle="tab"
+              data-bs-target="#form-tabs-dependent"
+              role="tab"
+              aria-selected="false"
+              tabIndex={-1}
+            >
+              Dependent Details
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link"
+              data-bs-toggle="tab"
+              data-bs-target="#form-tabs-emergency"
+              role="tab"
+              aria-selected="false"
+              tabIndex={-1}
+            >
+              Emergency
+            </button>
+          </li>
+        </ul>
+
+        <div className="tab-content ">
+
+          <div
+            class="tab-pane fade active show"
+            id="form-tabs-personal"
+            role="tabpanel"
+          >
+            <div class="d-flex justify-content-start mb-3">
+              <p class="d-inline fs-4">Basic Details</p>
+              <p class="d-inline p-2 text-danger">*Required</p>
+            </div>
+            <div class="">
               <div class="">
-                <div class="">
-                  <form
-                    class="needs-validation"
-                    novalidate
-                    id="bs-validation-form2"
-                  >
-                    <div class="row">
-                      <div class="mb-3 col-xl-6">
-                        <label
-                          class="form-label d-flex justify-content-start"
-                          for="bs-validation-name"
-                        >
-                          FIRST NAME
-                        </label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="bs-validation-name"
-                          placeholder="John"
-                          required
-                        />
-                        <div class="invalid-feedback">
-                          Please enter your first name.
-                        </div>
-                      </div>
-                      <div class="mb-3 col-xl-6">
-                        <label
-                          class="form-label d-flex justify-content-start"
-                          for="bs-validation-last-name"
-                        >
-                          LAST NAME
-                        </label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="bs-validation-last-name"
-                          placeholder="Doe"
-                          required
-                        />
-                        <div class="invalid-feedback">
-                          Please enter your last name.
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="mb-2">
+                <form
+                  class="needs-validation"
+                  novalidate
+                  id="bs-validation-form2"
+                >
+                  <div class="row">
+                    <div class="mb-3 col-xl-6">
                       <label
-                        className="form-label d-flex justify-content-start"
-                        htmlFor="bs-validation-name"
+                        class="form-label d-flex justify-content-start"
+                        for="bs-validation-name"
                       >
-                        NIC
+                        FIRST NAME
                       </label>
                       <input
                         type="text"
-                        className="form-control mb-3"
+                        class="form-control"
                         id="bs-validation-name"
-                        placeholder="XXXXXXXXXXXXXXV"
+                        placeholder="John"
                         required
                       />
-                      <div className="invalid-feedback">
-                        Please enter your nic.
-                      </div>
-                    </div>
-
-                    <div className="mb-2">
-                      <label className="form-check-label mt-2 d-flex justify-content-start">
-                        Gender
-                      </label>
-                      <div className="col mt-2 d-flex justify-content-start">
-                        <div className="form-check form-check-inline">
-                          <input
-                            type="radio"
-                            id="bs-validation-radio-male"
-                            name="gender"
-                            className="form-check-input"
-                            required
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="bs-validation-radio-male"
-                          >
-                            Male
-                          </label>
-                        </div>
-                        <div className="form-check form-check-inline">
-                          <input
-                            type="radio"
-                            id="bs-validation-radio-female"
-                            name="gender"
-                            className="form-check-input"
-                            required
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="bs-validation-radio-female"
-                          >
-                            Female
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="mb-3">
-                      <label
-                        className="form-label d-flex justify-content-start mt-3"
-                        htmlFor="datepicker1 bs-validation-dob"
-                      >
-                        DOB
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control flatpickr-validation flatpickr-input mb-2"
-                        placeholder="YYYY/MM/DD"
-                        id="datepicker1"
-                        name="bs-validation-dob"
-                        required
-                        readOnly="readonly"
-                      />
-                      <div className="invalid-feedback">
-                        Please Enter Your DOB
-                      </div>
-                    </div>
-                    <div className="mb-3">
-                      <label
-                        className="form-label d-flex justify-content-start"
-                        htmlFor="bs-validation-email"
-                      >
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        id="bs-validation-email"
-                        className="form-control"
-                        placeholder="john.doe@example.com"
-                        required
-                      />
-                      <div className="invalid-feedback">
-                        Please enter a valid email
-                      </div>
-                    </div>
-
-                    <div className="mb-2">
-                      <label
-                        className="form-label d-flex justify-content-start"
-                        htmlFor="bs-validation-name"
-                      >
-                        ADDRESS
-                      </label>
-                      <textarea
-                        type="text"
-                        className="form-control mb-3"
-                        id="bs-validation-name"
-                        placeholder="address here"
-                        required
-                      ></textarea>
-                      <div className="invalid-feedback">
-                        Please enter your address.
-                      </div>
-                    </div>
-                    <div className="mb-3">
-                      <label
-                        className="form-label d-flex justify-content-start"
-                        htmlFor="bs-validation-mobile"
-                      >
-                        MOBILE
-                      </label>
-                      <input
-                        type="tel"
-                        id="bs-validation-mobile"
-                        className="form-control"
-                        placeholder="+1XXXXXXXXXX"
-                        required
-                      />
-                      <div className="invalid-feedback">
-                        Please enter a valid number
-                      </div>
-                    </div>
-
-                    <div class="mb-3">
-                      <label
-                        className="form-label d-flex justify-content-start"
-                        htmlFor="image-upload"
-                      >
-                        PROFILE PHOTO
-                      </label>
-                      <input
-                        type="file"
-                        id="image-upload"
-                        name="profile-image"
-                        accept="image/*"
-                        class="form-control p-2"
-                        required
-                      />
-                      <div class="mt-4 mb-4">
-                        <img
-                          id="profile-image"
-                          src="#"
-                          alt="Preview"
-                          style={{ display: "none" }}
-                          class="w-20 h-48 rounded-md"
-                        />
-                      </div>
                       <div class="invalid-feedback">
-                        Please upload a profile photo.
+                        Please enter your first name.
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-12 d-flex justify-content-start">
-                        <button
-                          type="submit"
-                          class="btn btn-primary"
-                          id="position-bottom-end"
-                        >
-                          Next
-                        </button>
-                        <button
-                          type="reset"
-                          class="btn btn-label-secondary ml-4"
-                        >
-                          Cancel
-                        </button>
+                    <div class="mb-2 col-xl-6">
+                      <label
+                        class="form-label d-flex justify-content-start"
+                        for="bs-validation-last-name"
+                      >
+                        LAST NAME
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="bs-validation-last-name"
+                        placeholder="Doe"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please enter your last name.
                       </div>
                     </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="tab-pane fade"
-              id="form-tabs-account"
-              role="tabpanel"
-            >
-              <div className=" d-flex justify-content-start">
-                <p className="d-inline fs-4 ">Current Work Details</p>
-                <p className="d-inline p-2 mb-3 text-danger ">*Required</p>
-              </div>
-              <form
-                className="needs-validation"
-                noValidate=""
-                id="bs-validation-form2"
-              >
-                <div className="mb-3">
-                  <label
-                    className="form-label d-flex justify-content-start"
-                    htmlFor="bs-validation-name"
-                  >
-                    EMPLOYEEMENT NO
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="bs-validation-name"
-                    placeholder="XXXXXXX"
-                    required
-                  />
-                  <div className="invalid-feedback">
-                    Please enter your name.
                   </div>
-                </div>
-                <div className="mb-3">
-                  <label
-                    className="form-label d-flex justify-content-start"
-                    htmlFor="bs-validation-name"
-                  >
-                    BRANCH NAME
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="bs-validation-name"
-                    placeholder="John Doe"
-                    required
-                  />
-                  <div className="invalid-feedback">
-                    Please enter your name.
-                  </div>
-                </div>
-                <div className="mb-3">
-                  <label
-                    className="form-label d-flex justify-content-start"
-                    htmlFor="basic-default-country"
-                  >
-                    DEPARTMENT
-                  </label>
-                  <select
-                    className="form-select"
-                    id="basic-default-country"
-                    required
-                    fdprocessedid="9ypqh3"
-                  >
-                    <option value="">select the department</option>
-                    <option value="usa">USA</option>
-                    <option value="uk">UK</option>
-                    <option value="france">France</option>
-                    <option value="australia">Australia</option>
-                    <option value="spain">Spain</option>
-                  </select>
-                </div>
 
-                <div className="mb-3">
-                  <label
-                    className="form-label d-flex justify-content-start"
-                    htmlFor="basic-default-country"
-                  >
-                    EMPLOYEEMENT CATEGORY
-                  </label>
-                  <select
-                    className="form-select"
-                    id="basic-default-country"
-                    required
-                    fdprocessedid="9ypqh3"
-                  >
-                    <option value="">select the category</option>
-                    <option value="usa">intern</option>
-                    <option value="uk">contract basis</option>
-                    <option value="uk">permen</option>
-
-                  </select>
-                </div>
-
-                <div className="mb-3">
-                  <label
-                    className="form-label d-flex justify-content-start"
-                    htmlFor="basic-default-country"
-                  >
-                    DESIGNATION
-                  </label>
-                  <select
-                    className="form-select"
-                    id="basic-default-country"
-                    required=""
-                    fdprocessedid="9ypqh3"
-                  >
-                    <option value="">select the designation</option>
-                    <option value="usa">USA</option>
-                    <option value="uk">UK</option>
-                    <option value="france">France</option>
-                    <option value="australia">Australia</option>
-                    <option value="spain">Spain</option>
-                  </select>
-                </div>
-                <div className="mb-3">
-                  <label
-                    className="form-label d-flex justify-content-start"
-                    htmlFor="bs-validation-dob"
-                  >
-                    STARTING DATE/JOINING DATE
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control flatpickr-validation flatpickr-input"
-                    placeholder="YYYY/MM/DD"
-                    id="datepicker2"
-                    required
-                    readOnly="readonly"
-                  />
-                  <div className="invalid-feedback"></div>
-                </div>
-
-                <div className="mb-3">
-                  <label
-                    className="form-label d-flex justify-content-start"
-                    htmlFor="bs-validation-mobile"
-                  >
-                    WORK TELEPHONE
-                  </label>
-                  <input
-                    type="tel"
-                    id="bs-validation-mobile"
-                    className="form-control "
-                    placeholder="+94XXXXXXXXXX"
-                    aria-label="john.doe"
-                    required
-                  />
-                  <div className="invalid-feedback">
-                    Please enter a valid number
-                  </div>
-                </div>
-                <div className="row ">
-                  <div className="col-12 d-flex justify-content-start">
-                    <button type="submit" className="btn btn-primary">
-                      Next
-                    </button>
-                    <button
-                      type="reset"
-                      className="btn btn-label-secondary ml-4"
-                      fdprocessedid="mo4gu"
+                  <div className="mb-2">
+                    <label
+                      className="form-label d-flex justify-content-start"
+                      htmlFor="bs-validation-name"
                     >
-                      Cancel
-                    </button>
+                      NIC
+                    </label>
+                    <input
+                      type="number"
+                      className="form-control mb-3"
+                      id="bs-validation-name"
+                      placeholder="XXXXXXXXXXXXXXV"
+                      required
+                    />
+                    <div className="invalid-feedback">
+                      Please enter your nic.
+                    </div>
                   </div>
-                </div>
-              </form>
-            </div>
 
-            <div
-              className="tab-pane fade"
-              id="form-tabs-social"
-              role="tabpanel"
+                  <div className="mb-2">
+                    <label className="form-check-label mt-2 d-flex justify-content-start">
+                      Gender
+                    </label>
+                    <div className="col mt-2 d-flex justify-content-start">
+                      <div className="form-check form-check-inline">
+                        <input
+                          type="radio"
+                          id="bs-validation-radio-male"
+                          name="gender"
+                          className="form-check-input"
+                          required
+                        />
+                        <label
+                          className="form-check-label"
+                          htmlFor="bs-validation-radio-male"
+                        >
+                          Male
+                        </label>
+                      </div>
+                      <div className="form-check form-check-inline">
+                        <input
+                          type="radio"
+                          id="bs-validation-radio-female"
+                          name="gender"
+                          className="form-check-input"
+                          required
+                        />
+                        <label
+                          className="form-check-label"
+                          htmlFor="bs-validation-radio-female"
+                        >
+                          Female
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mb-3">
+                    <label
+                      className="form-label d-flex justify-content-start mt-3"
+                      htmlFor="datepicker1 bs-validation-dob"
+                    >
+                      DOB
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control flatpickr-validation flatpickr-input mb-2"
+                      placeholder="YYYY/MM/DD"
+                      id="datepicker1"
+                      name="bs-validation-dob"
+                      required
+                      readOnly="readonly"
+                    />
+                    <div className="invalid-feedback">
+                      Please Enter Your DOB
+                    </div>
+                  </div>
+                  <div className="mb-3">
+                    <label
+                      className="form-label d-flex justify-content-start"
+                      htmlFor="bs-validation-email"
+                    >
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="bs-validation-email"
+                      className="form-control"
+                      placeholder="john.doe@example.com"
+                      required
+                    />
+                    <div className="invalid-feedback">
+                      Please enter a valid email
+                    </div>
+                  </div>
+
+                  <div className="mb-2">
+                    <label
+                      className="form-label d-flex justify-content-start"
+                      htmlFor="bs-validation-name"
+                    >
+                      ADDRESS
+                    </label>
+                    <textarea
+                      type="text"
+                      className="form-control mb-3"
+                      id="bs-validation-name"
+                      placeholder="address here"
+                      required
+                    ></textarea>
+                    <div className="invalid-feedback">
+                      Please enter your address.
+                    </div>
+                  </div>
+                  <div className="mb-3">
+                    <label
+                      className="form-label d-flex justify-content-start"
+                      htmlFor="bs-validation-mobile"
+                    >
+                      MOBILE
+                    </label>
+                    <input
+                      type="number"
+                      id="bs-validation-mobile"
+                      className="form-control"
+                      placeholder="+1XXXXXXXXXX"
+                      required
+
+                    />
+                    <div className="invalid-feedback">
+                      Please enter a valid number
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label
+                      className="form-label d-flex justify-content-start"
+                      htmlFor="image-upload"
+                    >
+                      PROFILE PHOTO
+                    </label>
+                    <input
+                      type="file"
+                      id="image-upload"
+                      name="profile-image"
+                      accept="image/*"
+                      class="form-control p-2"
+                      required
+                    />
+                    <div class="mt-4 mb-4">
+                      <img
+                        id="profile-image"
+                        src="#"
+                        alt="Preview"
+                        style={{ display: "none" }}
+                        class="w-20 h-48 rounded-md"
+                      />
+                    </div>
+                    <div class="invalid-feedback">
+                      Please upload a profile photo.
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 d-flex justify-content-start">
+                      <button
+                        type="submit"
+                        class="btn btn-primary"
+                        id="position-bottom-end"
+                      >
+                        Next
+                      </button>
+                      <button
+                        type="reset"
+                        class="btn btn-label-secondary ml-4"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="tab-pane fade"
+            id="form-tabs-account"
+            role="tabpanel"
+          >
+            <div className=" d-flex justify-content-start">
+              <p className="d-inline fs-4 ">Current Work Details</p>
+              <p className="d-inline p-2 mb-2 text-danger ">*Required</p>
+            </div>
+            <form
+              className="needs-validation"
+              noValidate=""
+              id="bs-validation-form2"
             >
-              <div id="form-container">
-                {/* Initial form */}
-                <div className="form-container" id="form-container-1">
-                  <p className=" fs-4  d-flex justify-content-start mb-3">
-                    Previous Work History
-                  </p>
-                  <form className="form-repeater" id="myForm">
-                    <div data-repeater-list="group-a">
-                      <div data-repeater-item="">
+              <div className="mb-3">
+                <label
+                  className="form-label d-flex justify-content-start"
+                  htmlFor="bs-validation-name"
+                >
+                  EMPLOYEEMENT NO
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="bs-validation-name"
+                  placeholder="XXXXXXX"
+                  required
+                />
+                <div className="invalid-feedback">
+                  Please enter your name.
+                </div>
+              </div>
+              <div className="mb-3">
+                <label
+                  className="form-label d-flex justify-content-start"
+                  htmlFor="bs-validation-name"
+                >
+                  BRANCH NAME
+                </label>
+                <select
+                  className="form-select"
+                  id="basic-default-country"
+                  required
+                  fdprocessedid="9ypqh3"
+                >
+                  <option value="">select the department</option>
+                  <option value="usa">Gem</option>
+                  <option value="uk">Jewelry</option>
+                  <option value="france">License</option>
+
+                </select>
+
+              </div>
+              <div className="mb-3">
+                <label
+                  className="form-label d-flex justify-content-start mb-2"
+                  htmlFor="basic-default-country"
+                >
+                  DEPARTMENT
+                </label>
+                <select
+                  className="form-select"
+                  id="basic-default-country"
+                  required
+                  fdprocessedid="9ypqh3"
+                >
+                  <option value="">select the department</option>
+                  <option value="usa">Gem</option>
+                  <option value="uk">Jewelry</option>
+                  <option value="france">License</option>
+
+                </select>
+              </div>
+
+              <div className="mb-3">
+          <label className="form-label d-flex justify-content-start mb-2" htmlFor="basic-default-country">EMPLOYMENT CATEGORY</label>
+          <select className="form-select" id="employee-category" required fdprocessedid="9ypqh3" onChange={handleCategoryChange}>
+            <option value="">select the category</option>
+            <option value="standard">Standard</option>
+            <option value="pl">PL</option>
+          </select>
+        </div>
+
+              <div className="mb-3">
+                <label className="form-label d-flex justify-content-start" htmlFor="employee-type">EMPLOYMENT TYPE</label>
+                <select className="form-select" id="employee-type" required fdprocessedid="9ypqh3">
+                  <option value="">select the type</option>
+                  {employeeTypeOptions.map((option, index) => (
+                    <option key={index} value={option}>{option}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="mb-3">
+                <label
+                  className="form-label d-flex justify-content-start"
+                  htmlFor="basic-default-country"
+                >
+                  DESIGNATION
+                </label>
+
+                <input
+                  type="text"
+                  className="form-control"
+                  id="bs-validation-name"
+                  placeholder="XXXXXXX"
+                  required
+                />
+              </div>
+              <div className="mb-3">
+                <label
+                  className="form-label d-flex justify-content-start"
+                  htmlFor="bs-validation-dob"
+                >
+                  STARTING DATE/JOINING DATE
+                </label>
+                <input
+                  type="text"
+                  className="form-control flatpickr-validation flatpickr-input"
+                  placeholder="YYYY/MM/DD"
+                  id="datepicker2"
+                  required
+                  readOnly="readonly"
+                />
+                <div className="invalid-feedback"></div>
+              </div>
+
+              <div className="mb-3">
+                <label
+                  className="form-label d-flex justify-content-start"
+                  htmlFor="bs-validation-mobile"
+                >
+                  WORK TELEPHONE
+                </label>
+                <input
+                  type="number"
+                  id="bs-validation-mobile"
+                  className="form-control "
+                  placeholder="+94XXXXXXXXXX"
+                  aria-label="john.doe"
+                  required
+                />
+                <div className="invalid-feedback">
+                  Please enter a valid number
+                </div>
+              </div>
+              <div className="row ">
+                <div className="col-12 d-flex justify-content-start">
+                  <button type="submit" className="btn btn-primary">
+                    Next
+                  </button>
+                  <button
+                    type="reset"
+                    className="btn btn-label-secondary ml-4"
+                    fdprocessedid="mo4gu"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div
+            className="tab-pane fade"
+            id="form-tabs-social"
+            role="tabpanel"
+          >
+            <div id="form-container">
+              {/* Initial form */}
+              <div className="form-container" id="form-container-1">
+                <p className=" fs-4  d-flex justify-content-start mb-3">
+                  Previous Work History
+                </p>
+                <form className="form-repeater" id="myForm">
+                  <div data-repeater-list="group-a">
+                    <div data-repeater-item="">
+                      <div className="row">
+                        <div className="mb-2 col-lg-12 col col-12 mb-0">
+                          <label
+                            className="form-label d-flex justify-content-start mt-3"
+                            htmlFor="form-repeater-1-1"
+                          >
+                            COMPANY/INSTITUTE NAME
+                          </label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            placeholder="john.doe"
+                          />
+                        </div>
                         <div className="row">
-                          <div className="mb-3 col-lg-12 col col-12 mb-0">
+                          <div className="mb-2 col-lg-12 col col-12 mb-0">
                             <label
-                              className="form-label d-flex justify-content-start mt-3"
+                              className="form-label d-flex justify-content-start"
                               htmlFor="form-repeater-1-1"
                             >
-                              COMPANY/INSTITUTE NAME
+                              DESIGNATION
                             </label>
                             <input
                               type="text"
@@ -1147,44 +1179,10 @@ export default function () {
                               placeholder="john.doe"
                             />
                           </div>
-                          <div className="row">
-                            <div className="mb-3 col-lg-12 col col-12 mb-0">
-                              <label
-                                className="form-label d-flex justify-content-start"
-                                htmlFor="form-repeater-1-1"
-                              >
-                                DESIGNATION
-                              </label>
-                              <input
-                                type="text"
-                                className="form-control"
-                                placeholder="john.doe"
-                              />
-                            </div>
-                            <div className="mb-3">
-                              <label
-                                className="form-label d-flex justify-content-start"
-                                htmlFor="bs-validation-dob "
-                              >
-                                STARTING DATE/JOINING DATE
-                              </label>
-                              <input
-                                type="text"
-                                className="form-control flatpickr-validation flatpickr-input"
-                                placeholder="YYYY/MM/DD"
-                                id="datepicker3"
-                                required=""
-                                readOnly="readonly"
-                              />
-                              <div className="invalid-feedback">
-                                Please Enter Your DOB
-                              </div>
-                            </div>
-                          </div>
                           <div className="mb-3">
                             <label
                               className="form-label d-flex justify-content-start"
-                              htmlFor="bs-validation-dob"
+                              htmlFor="bs-validation-dob "
                             >
                               STARTING DATE/JOINING DATE
                             </label>
@@ -1192,160 +1190,7 @@ export default function () {
                               type="text"
                               className="form-control flatpickr-validation flatpickr-input"
                               placeholder="YYYY/MM/DD"
-                              id="datepicker4"
-                              required=""
-                              readOnly="readonly"
-                            />
-                          </div>
-                          <div className="col-lg-12 col-12 d-flex justify-content-end align-items-center mb-3 mt-0">
-                            {/* Center the Delete button */}
-                            <button
-                              type="button"
-                              className="btn btn-label-danger mb-4 w-15"
-                              data-repeater-delete=""
-                              id="confirm-color"
-                            >
-                              <i className="bx bx-plus me-1 " />
-                              <span
-                                className="align-middle"
-                                style={{ fontSize: "15px" }}
-                              >
-                                Remove
-                              </span>
-                            </button>
-                          </div>
-                        </div>
-                        <hr />
-                      </div>
-                    </div>
-                    <div className="mb-0 mt-3">
-                      <div className="row">
-                        <div className="col-12 d-flex justify-content-between">
-                          {/* Left-aligned Save and Cancel buttons */}
-                          <div>
-                            <button type="submit" className="btn btn-primary">
-                              Next
-                            </button>
-                          </div>
-                          {/* Right-aligned Add button */}
-                          <div>
-                            <button
-                              className="btn btn-primary"
-                              type="button"
-                              id="addRepeater"
-                            >
-                              <i className="bx bx-plus me-1" />
-                              <span
-                                className="align-middle"
-                                style={{ fontSize: "15px" }}
-                              >
-                                Add More
-                              </span>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="tab-pane fade"
-              id="form-tabs-education"
-              role="tabpanel"
-            >
-              <div id="form-container">
-                {/* Initial form */}
-                <div className="form-container" id="form-container-1">
-                  <p className=" fs-4 d-flex justify-content-start mb-3 ">
-                    Education Qualification
-                  </p>
-                  <form className="form-repeater" id="myForm1">
-                    <div data-repeater-list="group-a">
-                      <div data-repeater-item="">
-                        <div className="row">
-                          <div className="mb-3 col-lg-12 col col-12 mb-0">
-                            <label
-                              className="form-label d-flex justify-content-start mt-3"
-                              htmlFor="form-repeater-1-1"
-                            >
-                              UNIVERCITY/INSTITUTE NAME
-                            </label>
-                            <input
-                              type="text"
-                              className="form-control"
-                              placeholder="type here"
-                            />
-                          </div>
-                          <div className="row">
-                            <div className="mb-3 col-lg-12 col col-12 mb-0">
-                              <label
-                                className="form-label d-flex justify-content-start"
-                                htmlFor="form-repeater-1-1"
-                              >
-                                QUALIFICATION
-                              </label>
-                              <input
-                                type="text"
-                                className="form-control"
-                                placeholder="type here"
-                              />
-                            </div>
-                            <div className="mb-3">
-                              <label
-                                className="form-label d-flex justify-content-start"
-                                htmlFor="basic-default-country"
-                              >
-                                QUALIFICATION TYPE
-                              </label>
-                              <select
-                                className="form-select"
-                                id="basic-default-country"
-                                required=""
-                                fdprocessedid="9ypqh3"
-                              >
-                                <option value="">select the category</option>
-                                <option value="usa">USA</option>
-                                <option value="uk">UK</option>
-                                <option value="france">France</option>
-                                <option value="australia">Australia</option>
-                                <option value="spain">Spain</option>
-                              </select>
-                            </div>
-                            <div className="mb-3">
-                              <label
-                                className="form-label d-flex justify-content-start"
-                                htmlFor="bs-validation-dob"
-                              >
-                                STARTING DATE/JOINING DATE
-                              </label>
-                              <input
-                                type="text"
-                                className="form-control flatpickr-validation flatpickr-input"
-                                placeholder="YYYY/MM/DD"
-                                id="datepicker5"
-                                required=""
-                                readOnly="readonly"
-                              />
-                              <div className="invalid-feedback">
-                                Please Enter Your DOB
-                              </div>
-                            </div>
-                          </div>
-                          <div className="mb-3">
-                            <label
-                              className="form-label d-flex justify-content-start"
-                              htmlFor="bs-validation-dob"
-                            >
-                              STARTING DATE/JOINING DATE
-                            </label>
-                            <input
-                              type="text"
-                              className="form-control flatpickr-validation flatpickr-input"
-                              placeholder="YYYY/MM/DD"
-                              id="datepicker6"
+                              id="datepicker3"
                               required=""
                               readOnly="readonly"
                             />
@@ -1353,151 +1198,326 @@ export default function () {
                               Please Enter Your DOB
                             </div>
                           </div>
-                          <div className="col-lg-12 col-12 d-flex justify-content-end align-items-center mb-3 mt-0">
-                            {/* Center the Delete button */}
-                            <button
-                              type="button"
-                              className="btn btn-label-danger mb-4 w-15"
-                              data-repeater-delete=""
-                            >
-                              <i className="bx bx-plus me-1 " />
-                              <span
-                                className="align-middle"
-                                style={{ fontSize: "15px" }}
-                              >
-                                Remove
-                              </span>
-                            </button>
-                          </div>
                         </div>
-                        <hr />
+                        <div className="mb-3">
+                          <label
+                            className="form-label d-flex justify-content-start"
+                            htmlFor="bs-validation-dob"
+                          >
+                            STARTING DATE/JOINING DATE
+                          </label>
+                          <input
+                            type="text"
+                            className="form-control flatpickr-validation flatpickr-input"
+                            placeholder="YYYY/MM/DD"
+                            id="datepicker4"
+                            required=""
+                            readOnly="readonly"
+                          />
+                        </div>
+                        <div className="col-lg-12 col-12 d-flex justify-content-end align-items-center mb-2 mt-0">
+                          {/* Center the Delete button */}
+                          <button
+                            type="button"
+                            className="btn btn-label-danger mb-4 w-15"
+                            data-repeater-delete=""
+                            id="confirm-color"
+                          >
+                            <i className="bx bx-plus me-1 " />
+                            <span
+                              className="align-middle"
+                              style={{ fontSize: "15px" }}
+                            >
+                              Remove
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <hr />
+                    </div>
+                  </div>
+                  <div className="mb-0 mt-3">
+                    <div className="row">
+                      <div className="col-12 d-flex justify-content-between">
+                        {/* Left-aligned Save and Cancel buttons */}
+                        <div>
+                          <button type="submit" className="btn btn-primary">
+                            Next
+                          </button>
+                        </div>
+                        {/* Right-aligned Add button */}
+                        <div>
+                          <button
+                            className="btn btn-primary"
+                            type="button"
+                            id="addRepeater"
+                          >
+                            <i className="bx bx-plus me-1" />
+                            <span
+                              className="align-middle"
+                              style={{ fontSize: "15px" }}
+                            >
+                              Add More
+                            </span>
+                          </button>
+                        </div>
                       </div>
                     </div>
-                    <div className="mb-0 mt-3">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="tab-pane fade"
+            id="form-tabs-education"
+            role="tabpanel"
+          >
+            <div id="form-container">
+              {/* Initial form */}
+              <div className="form-container" id="form-container-1">
+                <p className=" fs-4 d-flex justify-content-start mb-3 ">
+                  Education Qualification
+                </p>
+                <form className="form-repeater" id="myForm1">
+                  <div data-repeater-list="group-a">
+                    <div data-repeater-item="">
                       <div className="row">
-                        <div className="col-12 d-flex justify-content-between">
-                          {/* Left-aligned Save and Cancel buttons */}
-                          <div>
-                            <button type="submit" className="btn btn-primary">
-                              Next
-                            </button>
-                          </div>
-                          {/* Right-aligned Add button */}
-                          <div>
-                            <button
-                              className="btn btn-primary"
-                              type="button"
-                              id="addRepeater1"
+                        <div className="mb-3 col-lg-12 col col-12 mb-0">
+                          <label
+                            className="form-label d-flex justify-content-start mt-3"
+                            htmlFor="form-repeater-1-1"
+                          >
+                            UNIVERCITY/INSTITUTE NAME
+                          </label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            placeholder="type here"
+                          />
+                        </div>
+                        <div className="row">
+                          <div className="mb-3 col-lg-12 col col-12 mb-0">
+                            <label
+                              className="form-label d-flex justify-content-start"
+                              htmlFor="form-repeater-1-1"
                             >
-                              <i className="bx bx-plus me-1" />
-                              <span
-                                className="align-middle"
-                                style={{ fontSize: "15px" }}
-                              >
-                                Add More
-                              </span>
-                            </button>
+                              QUALIFICATION
+                            </label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="type here"
+                            />
                           </div>
+                          <div className="mb-3">
+                            <label
+                              className="form-label d-flex justify-content-start"
+                              htmlFor="basic-default-country"
+                            >
+                              QUALIFICATION TYPE
+                            </label>
+                            <select
+                              className="form-select"
+                              id="basic-default-country"
+                              required=""
+                              fdprocessedid="9ypqh3"
+                            >
+                              <option value="">select the category</option>
+                              <option value="usa">USA</option>
+                              <option value="uk">UK</option>
+                              <option value="france">France</option>
+                              <option value="australia">Australia</option>
+                              <option value="spain">Spain</option>
+                            </select>
+                          </div>
+                          <div className="mb-3">
+                            <label
+                              className="form-label d-flex justify-content-start"
+                              htmlFor="bs-validation-dob"
+                            >
+                              STARTING DATE/JOINING DATE
+                            </label>
+                            <input
+                              type="text"
+                              className="form-control flatpickr-validation flatpickr-input"
+                              placeholder="YYYY/MM/DD"
+                              id="datepicker5"
+                              required=""
+                              readOnly="readonly"
+                            />
+                            <div className="invalid-feedback">
+                              Please Enter Your DOB
+                            </div>
+                          </div>
+                        </div>
+                        <div className="mb-3">
+                          <label
+                            className="form-label d-flex justify-content-start"
+                            htmlFor="bs-validation-dob"
+                          >
+                            STARTING DATE/JOINING DATE
+                          </label>
+                          <input
+                            type="text"
+                            className="form-control flatpickr-validation flatpickr-input"
+                            placeholder="YYYY/MM/DD"
+                            id="datepicker6"
+                            required=""
+                            readOnly="readonly"
+                          />
+                          <div className="invalid-feedback">
+                            Please Enter Your DOB
+                          </div>
+                        </div>
+                        <div className="col-lg-12 col-12 d-flex justify-content-end align-items-center mb-3 mt-0">
+                          {/* Center the Delete button */}
+                          <button
+                            type="button"
+                            className="btn btn-label-danger mb-4 w-15"
+                            data-repeater-delete=""
+                          >
+                            <i className="bx bx-plus me-1 " />
+                            <span
+                              className="align-middle"
+                              style={{ fontSize: "15px" }}
+                            >
+                              Remove
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <hr />
+                    </div>
+                  </div>
+                  <div className="mb-0 mt-3">
+                    <div className="row">
+                      <div className="col-12 d-flex justify-content-between">
+                        {/* Left-aligned Save and Cancel buttons */}
+                        <div>
+                          <button type="submit" className="btn btn-primary">
+                            Next
+                          </button>
+                        </div>
+                        {/* Right-aligned Add button */}
+                        <div>
+                          <button
+                            className="btn btn-primary"
+                            type="button"
+                            id="addRepeater1"
+                          >
+                            <i className="bx bx-plus me-1" />
+                            <span
+                              className="align-middle"
+                              style={{ fontSize: "15px" }}
+                            >
+                              Add More
+                            </span>
+                          </button>
                         </div>
                       </div>
                     </div>
-                  </form>
-                </div>
+                  </div>
+                </form>
               </div>
             </div>
+          </div>
 
-            <div className="tab-pane fade" id="form-tabs-dependent" role="tabpanel">
-              <div className="mb-3">
-                <p className="d-inline fs-4 d-flex justify-content-start mb-4">Dependent Details</p>
-              </div>
-              <form className=""  id="bs-validation-form">
-                <div className="mb-3" data-repeater-list="group-a">
-                  <div className="mb-3" data-repeater-item>
-                    <label className="form-label d-flex justify-content-start" htmlFor="">DEPENDENT NAME</label>
-                    <input type="text" className="form-control mb-4" id="" placeholder="John Doe"/>
-                    <div className="invalid-feedback" />
-                    <label className="form-label d-flex justify-content-start" htmlFor="">RELATIONSHIP</label>
-                    <input type="text" className="form-control" id="" placeholder="Relationship" />
-                    <div className="col-lg-12 col-12 d-flex justify-content-end align-items-center mb-3 mt-4">
-                      <button type="button" className="btn btn-label-danger mb-4 w-15" data-repeater-delete id="confirm-color">
-                        <i className="bx bx-plus me-1 " />
-                        <span className="align-middle" style={{ fontSize: "15px" }}>Remove</span>
-                      </button>
-                    </div>
-                    <hr />
-                  </div>
-                </div>
-                <div className="mb-0 mt-3">
-                  <div className="row">
-                    <div className="col-12 d-flex justify-content-between">
-                      <div>
-                        <button type="submit" className="btn btn-primary">Next</button>
-                      </div>
-                      <div>
-                        <button className="btn btn-primary" type="button" id="addRepeater2">
-                          <i className="bx bx-plus me-1" />
-                          <span className="align-middle" style={{ fontSize: "15px" }}>Add More</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
+          <div className="tab-pane fade" id="form-tabs-dependent" role="tabpanel">
+            <div className="mb-3">
+              <p className="d-inline fs-4 d-flex justify-content-start mb-4">Dependent Details</p>
             </div>
-
-            <div className="tab-pane fade" id="form-tabs-emergency" role="tabpanel">
-              <div className="mb-3 d-flex justify-content-start">
-                <p className="d-inline fs-4">Emergency Contact</p>
-                <p className="d-inline p-2 text-danger">*Required</p>
-              </div>
-              <form className="needs-validation" noValidate id="bs-validation-form1">
-                <div className="mb-3" data-repeater-list="group-a">
-                  <div className="mb-3" data-repeater-item>
-                    <label className="form-label d-flex justify-content-start" htmlFor="bs-validation-name">
-                      NAME
-                    </label>
-                    <input type="text" className="form-control mb-3" id="bs-validation-name" placeholder="John Doe" required />
-                    <div className="invalid-feedback" />
-                    <label className="form-label d-flex justify-content-start" htmlFor="bs-validation-relationship">
-                      RELATIONSHIP
-                    </label>
-                    <input type="text" className="form-control mb-3" id="bs-validation-relationship" placeholder="Relationship" required />
-                    <div className="invalid-feedback" />
-                    <label className="form-label d-flex justify-content-start" htmlFor="bs-validation-mobile">
-                      WORK TELEPHONE
-                    </label>
-                    <input type="tel" id="bs-validation-mobile" className="form-control" placeholder="+94XXXXXXXXXX" aria-label="john.doe" required />
-                    <div className="invalid-feedback">Please enter a valid number</div>
-                    <div className="col-lg-12 col-12 d-flex justify-content-end align-items-center mb-3 mt-4">
-                      <button type="button" className="btn btn-label-danger mb-4 w-15" data-repeater-delete="">
-                        <i className="bx bx-plus me-1" />
-                        <span className="align-middle" style={{ fontSize: "15px" }}>Remove</span>
-                      </button>
-                    </div>
-                    <hr />
+            <form className="" id="bs-validation-form">
+              <div className="mb-3" data-repeater-list="group-a">
+                <div className="mb-3" data-repeater-item>
+                  <label className="form-label d-flex justify-content-start" htmlFor="">DEPENDENT NAME</label>
+                  <input type="text" className="form-control mb-4" id="" placeholder="John Doe" />
+                  <div className="invalid-feedback" />
+                  <label className="form-label d-flex justify-content-start" htmlFor="">RELATIONSHIP</label>
+                  <input type="text" className="form-control" id="" placeholder="Relationship" />
+                  <div className="col-lg-12 col-12 d-flex justify-content-end align-items-center mb-5 mt-4">
+                    <button type="button" className="btn btn-label-danger   w-15" data-repeater-delete id="confirm-color">
+                      <i className="bx bx-plus me-1 " />
+                      <span className="align-middle" style={{ fontSize: "15px" }}>Remove</span>
+                    </button>
                   </div>
+                  <hr />
                 </div>
-                <div className="row">
+              </div>
+              <div className="mb-0 mt-3">
+                <div className="">
                   <div className="col-12 d-flex justify-content-between">
                     <div>
-                      <button type="submit" className="btn btn-primary">
-                        Submit
-                      </button>
+                      <button type="submit" className="btn btn-primary">Next</button>
                     </div>
-                    <div>
-                      <button className="btn btn-primary" type="button" id="addRepeater3">
+                    <div className="" style={{ marginLeft: "auto" }}>
+                      <button className="btn btn-primary" type="button" id="addRepeater2">
                         <i className="bx bx-plus me-1" />
                         <span className="align-middle" style={{ fontSize: "15px" }}>Add More</span>
                       </button>
                     </div>
                   </div>
                 </div>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
+
+          <div className="tab-pane fade" id="form-tabs-emergency" role="tabpanel">
+            <div className="mb-3 d-flex justify-content-start">
+              <p className="d-inline fs-4">Emergency Contact</p>
+              <p className="d-inline p-2 text-danger">*Required</p>
+            </div>
+            <form className="needs-validation" noValidate id="bs-validation-form1" style={{ height: "auto" }}>
+              <div className="mb-3" data-repeater-list="group-a">
+                <div className="mb-3" data-repeater-item>
+                  <label className="form-label d-flex justify-content-start" htmlFor="bs-validation-name">
+                    NAME
+                  </label>
+                  <input type="text" className="form-control mb-3" id="bs-validation-name" placeholder="John Doe" required />
+                  <div className="invalid-feedback" />
+                  <label className="form-label d-flex justify-content-start" htmlFor="bs-validation-relationship">
+                    RELATIONSHIP
+                  </label>
+                  <input type="text" className="form-control mb-3" id="bs-validation-relationship" placeholder="Relationship" required />
+                  <div className="invalid-feedback" />
+                  <label className="form-label d-flex justify-content-start" htmlFor="bs-validation-mobile">
+                    WORK TELEPHONE
+                  </label>
+                  <input type="number" id="bs-validation-mobile" className="form-control" placeholder="+94XXXXXXXXXX" aria-label="john.doe" required />
+                  <div className="invalid-feedback">Please enter a valid number</div>
+                  <div className="col-lg-12 col-12 d-flex justify-content-end align-items-center mb-3 mt-4">
+                    <button type="button" className="btn btn-label-danger mb-4 w-15" data-repeater-delete="">
+                      <i className="bx bx-plus me-1" />
+                      <span className="align-middle" style={{ fontSize: "15px" }}>Remove</span>
+                    </button>
+                  </div>
+                  <hr className="mb-3" />
+                </div>
+              </div>
+              <div className="">
+                <div className="col-12 d-flex justify-content-between">
+                  <div>
+                    <button type="submit" className="btn btn-primary">
+                      Submit
+                    </button>
+                  </div>
+                  <div>
+                    <button className="btn btn-primary" type="button" id="addRepeater3">
+                      <i className="bx bx-plus me-1" />
+                      <span className="align-middle" style={{ fontSize: "15px" }}>Add More</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+
         </div>
-        {/*              Content*/}
-      
+      </div>
+      {/*              Content*/}
+
     </div>
   );
 }
